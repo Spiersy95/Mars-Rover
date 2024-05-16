@@ -70,4 +70,17 @@ class PlateauParserTest {
         assertFalse(PlateauParser.plateauFormatVerify.test(input3));
     }
 
+    @Test
+    void wordPlateauFormatVerifyTest(){
+        String input1 = "three four";
+        String input2 = "one space";
+        String input3 = "hello there";
+
+        assertFalse(PlateauParser.plateauFormatVerify.test(input1));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input2));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input3));
+    }
+
+
+
 }

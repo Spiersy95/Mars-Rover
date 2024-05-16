@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlateauParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlateauParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +36,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.PlateauParserTest.correctInputPlateauFormatVerifyTest.executor": "Run",
+    "JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest.executor": "Run",
+    "JUnit.PlateauParserTest.missingInputPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest.executor": "Run",
+    "JUnit.PlateauParserTest.wordPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -56,17 +57,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest">
-    <configuration name="PlateauParserTest.correctInputPlateauFormatVerifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlateauParserTest" />
-      <option name="METHOD_NAME" value="correctInputPlateauFormatVerifyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PlateauParserTest.wordPlateauFormatVerifyTest">
     <configuration name="PlateauParserTest.extraInputPlateauFormatVerifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="" />
@@ -97,6 +88,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlateauParserTest.wordPlateauFormatVerifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlateauParserTest" />
+      <option name="METHOD_NAME" value="wordPlateauFormatVerifyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlateauParserTest.zeroStartPlateauFormatVerifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlateauParserTest.wordPlateauFormatVerifyTest" />
         <item itemvalue="JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest" />
         <item itemvalue="JUnit.PlateauParserTest.missingInputPlateauFormatVerifyTest" />
         <item itemvalue="JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest" />
         <item itemvalue="JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest" />
-        <item itemvalue="JUnit.PlateauParserTest.correctInputPlateauFormatVerifyTest" />
       </list>
     </recent_temporary>
   </component>

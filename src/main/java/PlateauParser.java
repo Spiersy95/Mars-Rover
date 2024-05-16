@@ -1,25 +1,45 @@
+import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PlateauParser {
+public class PlateauParser{
 
-  /*  public static PlateauSize getPlateauDim(Scanner scanner){
+    public static PlateauSize getPlateauSize(Scanner scanner){
         while(true){
             try {
-                System.out.println("Please input the dimensions of the region of the exploratory mission in the following format");
+
+                System.out.println("Please input the dimensions of the region of the exploratory mission in the following format:");
                 System.out.println("PositiveInteger PositiveInteger");
+
                 String plateauInput = scanner.nextLine();
-                if (plateauFormatVerify.test(plateauInput))
+
+
+                if (verifyFormat.test(plateauInput)){
+
+                    String[] plateauInputArray = plateauInput.split(" ");
+                    int plateauWidth = Integer.parseInt(plateauInputArray[0]);
+                    int plateauLength = Integer.parseInt(plateauInputArray[1]);
+
+                    return  new PlateauSize(plateauWidth, plateauLength);
+
+                } else {
+
+                    throw new IncorrectPlateauFormatException();
+
+                }
+            } catch (IncorrectPlateauFormatException e) {
+                System.out.println("Sorry your input was in the wrong format");
+
             }
         }
-    }*/
+    }
 
-    public static Predicate<String> plateauFormatVerify = input ->{
-        Pattern pattern = Pattern.compile("[1-9]d+?\\s[1-9]d+?");
+    public static Predicate<String> verifyFormat = input ->{
+        Pattern pattern = Pattern.compile("[1-9][0-9]*\\s[1-9][0-9]*");
         Matcher match = pattern.matcher(input);
         return match.matches();
     };
 
-    //public static Predicate<String>
+
 }

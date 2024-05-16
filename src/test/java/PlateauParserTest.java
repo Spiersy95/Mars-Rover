@@ -61,13 +61,13 @@ class PlateauParserTest {
 
     @Test
     void extraInputPlateauFormatVerifyTest(){
-        String input1 = "55 23";
-        String input2 = "50 20";
-        String input3 = "2 1000";
+        String input1 = "55 23 3323";
+        String input2 = "50 20 ";
+        String input3 = "2 1000 3232";
 
-        assertTrue(PlateauParser.plateauFormatVerify.test(input1));
-        assertTrue(PlateauParser.plateauFormatVerify.test(input2));
-        assertTrue(PlateauParser.plateauFormatVerify.test(input3));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input1));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input2));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input3));
     }
 
 }

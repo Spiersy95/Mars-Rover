@@ -16,10 +16,10 @@ public class PlateauParser {
     }*/
 
     public static Predicate<String> plateauFormatVerify = input ->{
-        Pattern pattern = Pattern.compile("\\d+\\s\\d+");
+        Pattern pattern = Pattern.compile("[1-9]d+?\\s[1-9]d+?");
         Matcher match = pattern.matcher(input);
         return match.matches();
     };
 
-    public static Predicate<String>
+    //public static Predicate<String>
 }

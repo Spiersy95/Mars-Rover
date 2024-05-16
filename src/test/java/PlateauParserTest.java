@@ -14,26 +14,34 @@ class PlateauParserTest {
         String input2 = "50 20";
         String input3 = "2 1000";
 
-        boolean ExpectedOutput1 = true;
-        boolean ExpectedOutput2 = true;
-        boolean ExpectedOutput3 = true;
-
         assertTrue(PlateauParser.plateauFormatVerify.test(input1));
         assertTrue(PlateauParser.plateauFormatVerify.test(input2));
         assertTrue(PlateauParser.plateauFormatVerify.test(input3));
     }
 
+    @Test
     void noNegativeInputPlateauFormatVerifyTest(){
-        String input1 = "55 23";
-        String input2 = "50 20";
-        String input3 = "2 1000";
+        String input1 = "-55 23";
+        String input2 = "50 -20";
+        String input3 = "-2 -1000";
 
-        boolean ExpectedOutput1 = true;
-        boolean ExpectedOutput2 = true;
-        boolean ExpectedOutput3 = true;
 
-        assertTrue(PlateauParser.plateauFormatVerify.test(input1));
-        assertTrue(PlateauParser.plateauFormatVerify.test(input2));
-        assertTrue(PlateauParser.plateauFormatVerify.test(input3));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input1));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input2));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input3));
+    }
+
+    @Test
+    void zeroStartPlateauFormatVerifyTest(){
+        String input1 = "0 0";
+        String input2 = "0 32";
+        String input3 = "050 0";
+        String input4 = "323 03";
+
+
+        assertFalse(PlateauParser.plateauFormatVerify.test(input1));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input2));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input3));
+        assertFalse(PlateauParser.plateauFormatVerify.test(input4));
     }
 }

@@ -1,3 +1,5 @@
+package InputParsers;
+
 import java.util.Scanner;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;

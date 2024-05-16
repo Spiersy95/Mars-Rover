@@ -1,3 +1,5 @@
+package InputParsers;
+
 public class PlateauSize {
 
     private int width;

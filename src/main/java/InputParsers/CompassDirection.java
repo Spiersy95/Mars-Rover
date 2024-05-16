@@ -1,3 +1,5 @@
+package InputParsers;
+
 public enum CompassDirection {
 
     N,

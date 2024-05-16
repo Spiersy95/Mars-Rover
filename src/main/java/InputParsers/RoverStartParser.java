@@ -65,6 +65,6 @@ public class RoverStartParser {
         };
     };
 
-    static BiPredicate<Integer, Integer> checkRoverInBounds = (location, plateauDim) -> location < plateauDim;
+    static BiPredicate<Integer, Integer> checkRoverInBounds = (location, plateauDim) -> location <= plateauDim;
 
 }

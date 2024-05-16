@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/IncorrectPlateauFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlateauParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlateauSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlateauParserTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlateauParserTest.incorrectInputGetPlateauDim">
+  <component name="RunManager" selected="JUnit.PlateauParserTest.correctInputGetPlateauDim">
     <configuration name="PlateauParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,9 +113,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlateauParserTest.incorrectInputGetPlateauDim" />
-        <item itemvalue="JUnit.PlateauParserTest" />
         <item itemvalue="JUnit.PlateauParserTest.correctInputGetPlateauDim" />
+        <item itemvalue="JUnit.PlateauParserTest" />
+        <item itemvalue="JUnit.PlateauParserTest.incorrectInputGetPlateauDim" />
         <item itemvalue="JUnit.PlateauParserTest.wordPlateauFormatVerifyTest" />
         <item itemvalue="JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest" />
       </list>

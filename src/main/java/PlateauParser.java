@@ -36,7 +36,7 @@ public class PlateauParser{
     }
 
     public static Predicate<String> verifyFormat = input ->{
-        Pattern pattern = Pattern.compile("[1-9][0-9]*\\s[1-9][0-9]*");
+        Pattern pattern = Pattern.compile("[1-5]\\s[1-5]");
         Matcher match = pattern.matcher(input);
         return match.matches();
     };

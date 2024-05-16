@@ -2,12 +2,10 @@ package InputParsers;
 
 import java.util.Scanner;
 import java.util.function.Predicate;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class PlateauParser{
+public class PlateauParser extends Parser{
 
-    public static PlateauSize getPlateauSize(Scanner scanner){
+    public PlateauSize getPlateauSize(Scanner scanner){
         while(true){
             try {
 
@@ -37,11 +35,7 @@ public class PlateauParser{
         }
     }
 
-    public static Predicate<String> verifyFormat = input ->{
-        Pattern pattern = Pattern.compile("[1-5]\\s[1-5]");
-        Matcher match = pattern.matcher(input);
-        return match.matches();
-    };
+    public static Predicate<String> verifyFormat = input -> Parser.verifyFormat.test("[1-5]\\s[1-5]", input);
 
 
 }

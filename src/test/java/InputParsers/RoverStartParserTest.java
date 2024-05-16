@@ -10,6 +10,7 @@ import static InputParsers.RoverStartParser.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverStartParserTest {
+    RoverStartParser roverStartParser = new RoverStartParser();
 
     @Test
     void correctInputGetRoverStartTest(){
@@ -41,10 +42,10 @@ class RoverStartParserTest {
         PlateauSize plateau3 = new PlateauSize(1, 1);
         PlateauSize plateau4 = new PlateauSize(2, 2);
 
-        Position position1 = getRoverStart(scanner, plateau1);
-        Position position2 = getRoverStart(scanner, plateau2);
-        Position position3 = getRoverStart(scanner, plateau3);
-        Position position4 = getRoverStart(scanner, plateau4);
+        Position position1 = roverStartParser.getRoverStart(scanner, plateau1);
+        Position position2 = roverStartParser.getRoverStart(scanner, plateau2);
+        Position position3 = roverStartParser.getRoverStart(scanner, plateau3);
+        Position position4 = roverStartParser.getRoverStart(scanner, plateau4);
 
         int actualOutput1x = position1.getX();
         int actualOutput1y = position1.getY();
@@ -95,7 +96,7 @@ class RoverStartParserTest {
         CompassDirection ExpectedOutputCompass1 = CompassDirection.N;
 
         PlateauSize plateau1 = new PlateauSize(2, 3);
-        Position position1 = getRoverStart(scanner, plateau1);
+        Position position1 = roverStartParser.getRoverStart(scanner, plateau1);
 
 
         int actualOutput1x = position1.getX();
@@ -145,10 +146,6 @@ class RoverStartParserTest {
 
     @Test
     void getCompassDirectionsTest(){
-        String inputN = "N";
-        String inputE = "E";
-        String inputS = "S";
-        String inputW = "W";
 
         assertEquals(CompassDirection.N, getCompassDirection.apply("N"));
         assertEquals(CompassDirection.E, getCompassDirection.apply("E"));

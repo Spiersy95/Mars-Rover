@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlateauParserTest {
 
+    PlateauParser plateauParser = new PlateauParser();
     @Test
     void correctInputGetPlateauDim() {
 
@@ -24,8 +25,8 @@ class PlateauParserTest {
         int ExpectedOutput2x = 2;
         int ExpectedOutput2y = 3;
 
-        PlateauSize plateau1 = PlateauParser.getPlateauSize(scanner);
-        PlateauSize plateau2 = PlateauParser.getPlateauSize(scanner);
+        PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
+        PlateauSize plateau2 = plateauParser.getPlateauSize(scanner);
 
         int actualOutput1x = plateau1.getWidth();
         int actualOutput1y = plateau1.getLength();
@@ -52,7 +53,7 @@ class PlateauParserTest {
         int ExpectedOutput1x = 2;
         int ExpectedOutput1y = 3;
 
-        PlateauSize plateau1 = PlateauParser.getPlateauSize(scanner);
+        PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
 
 
         int actualOutput1x = plateau1.getWidth();

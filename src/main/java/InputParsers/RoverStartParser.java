@@ -7,9 +7,9 @@ import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RoverStartParser {
+public class RoverStartParser extends Parser {
 
-    public static Position getRoverStart(Scanner scanner, PlateauSize plateauSize){
+    public Position getRoverStart(Scanner scanner, PlateauSize plateauSize){
         while(true){
             try {
 
@@ -49,11 +49,7 @@ public class RoverStartParser {
         }
     }
 
-    static Predicate<String> verifyFormat = input -> {
-        Pattern pattern = Pattern.compile("[0-5]\\s[0-5]\\s[NSWE]");
-        Matcher match = pattern.matcher(input);
-        return match.matches();
-    };
+    static Predicate<String> verifyFormat = input -> Parser.verifyFormat.test("[0-5]\s[0-5]\s[NSWE]", input);
 
     static Function<String, CompassDirection> getCompassDirection = input -> {
         return switch (input) {

@@ -77,14 +77,37 @@ class RoverStartParserTest {
         assertEquals(ExpectedOutput4x, actualOutput4x);
         assertEquals(ExpectedOutput4y, actualOutput4y);
         assertEquals(ExpectedOutputCompass4, actualOutputFacing4);
-
-
-
-
         scanner.close();
         System.setIn(sysInBackup);
     }
 
+    @Test
+    void incorrectInputGetRoverStartTest() {
+
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream("5 2 N\n4 3 F\n0   0 W\n2 3 N".getBytes());
+        System.setIn(in);
+
+        Scanner scanner = new Scanner(System.in);
+
+        int ExpectedOutput1x = 2;
+        int ExpectedOutput1y = 3;
+        CompassDirection ExpectedOutputCompass1 = CompassDirection.N;
+
+        PlateauSize plateau1 = new PlateauSize(2, 3);
+        Position position1 = getRoverStart(scanner, plateau1);
+
+
+        int actualOutput1x = position1.getX();
+        int actualOutput1y = position1.getY();
+        CompassDirection actualOutputFacing1 = position1.getFacing();
+
+        assertEquals(ExpectedOutput1x, actualOutput1x);
+        assertEquals(ExpectedOutput1y, actualOutput1y);
+        assertEquals(ExpectedOutputCompass1, actualOutputFacing1);
+        scanner.close();
+        System.setIn(sysInBackup);
+    }
 
     @Test
     void correctInputVerifyFormat(){

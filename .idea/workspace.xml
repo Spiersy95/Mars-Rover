@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +54,7 @@
     "JUnit.RoverStartParserTest.correctInputVerifyFormat.executor": "Run",
     "JUnit.RoverStartParserTest.getCompassDirectionsTest.executor": "Run",
     "JUnit.RoverStartParserTest.getRoverStartTest.executor": "Run",
+    "JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -79,7 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoverStartParserTest.getRoverStartTest">
+  <component name="RunManager" selected="JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest">
     <configuration name="RoverStartParserTest.CheckRoverInBoundsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
@@ -91,22 +91,6 @@
       <option name="PACKAGE_NAME" value="InputParsers" />
       <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
       <option name="METHOD_NAME" value="CheckRoverInBoundsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoverStartParserTest.WrongFormatVerifyFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputParsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
-      <option name="METHOD_NAME" value="WrongFormatVerifyFormat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,13 +144,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoverStartParserTest.incorrectInputGetRoverStartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputParsers" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
+      <option name="METHOD_NAME" value="incorrectInputGetRoverStartTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest" />
         <item itemvalue="JUnit.RoverStartParserTest.getRoverStartTest" />
         <item itemvalue="JUnit.RoverStartParserTest.getCompassDirectionsTest" />
         <item itemvalue="JUnit.RoverStartParserTest.WrongInputFormatVerifyFormat" />
         <item itemvalue="JUnit.RoverStartParserTest.CheckRoverInBoundsTest" />
-        <item itemvalue="JUnit.RoverStartParserTest.WrongFormatVerifyFormat" />
       </list>
     </recent_temporary>
   </component>

@@ -12,9 +12,11 @@ class PlateauParserTest {
 
     @Test
     void correctInputGetPlateauDim() {
+
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("5 2\n2 3".getBytes());
         System.setIn(in);
+
         Scanner scanner = new Scanner(System.in);
 
         int ExpectedOutput1x = 5;

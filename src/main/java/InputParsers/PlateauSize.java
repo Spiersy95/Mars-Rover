@@ -2,8 +2,8 @@ package InputParsers;
 
 public class PlateauSize {
 
-    private int width;
-    private int length;
+    private final int width;
+    private final int length;
 
     public PlateauSize(int width, int length){
         this.width = width;

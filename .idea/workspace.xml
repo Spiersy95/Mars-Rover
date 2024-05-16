@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectStartingPositionFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CompassDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/CompassDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IncorrectPlateauFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectPlateauFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +22,7 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -82,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoverStartParserTest.correctInputVerifyFormat">
+  <component name="RunManager" selected="JUnit.RoverStartParserTest.WrongFormatVerifyFormat">
     <configuration name="PlateauParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="InputParsers" />
@@ -112,11 +105,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlateauParserTest.wordPlateauFormatVerifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoverStartParserTest.WrongFormatVerifyFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.PlateauParserTest" />
-      <option name="METHOD_NAME" value="wordPlateauFormatVerifyTest" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
+      <option name="METHOD_NAME" value="WrongFormatVerifyFormat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverStartParserTest.WrongFormatVerifyFormat" />
         <item itemvalue="JUnit.RoverStartParserTest.correctInputVerifyFormat" />
         <item itemvalue="JUnit.PlateauParserTest.incorrectInputGetPlateauDim" />
         <item itemvalue="JUnit.PlateauParserTest.correctInputGetPlateauDim" />
         <item itemvalue="JUnit.PlateauParserTest" />
-        <item itemvalue="JUnit.PlateauParserTest.wordPlateauFormatVerifyTest" />
       </list>
     </recent_temporary>
   </component>

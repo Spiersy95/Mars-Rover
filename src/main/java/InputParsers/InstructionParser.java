@@ -1,19 +1,17 @@
 package InputParsers;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import static InputParsers.Instruction.L;
+
 
 public class InstructionParser extends Parser {
 
     public Instruction[] getInstructions(Scanner scanner){
         while(true){
             try {
-                System.out.println("Please input a string of Instructions:");
+                System.out.println("Please input a string of instructions:");
                 System.out.println("L - Rotates the rover anti-clockwise 90 degrees.");
                 System.out.println("R - Rotates the rover clockwise 90 degrees.");
                 System.out.println("M - Moves the rover forward.");

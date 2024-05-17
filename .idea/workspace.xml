@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InvalidInstructionsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Plateau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Rover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/logic/PlateauTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Plateau.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Rover.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,8 @@
     "JUnit.InstructionParserTest.convertingStringToInstructions.executor": "Run",
     "JUnit.InstructionParserTest.correctInputGetInstructions.executor": "Run",
     "JUnit.InstructionParserTest.correctInputVerifyFormat.executor": "Run",
+    "JUnit.InstructionParserTest.executor": "Run",
+    "JUnit.InstructionParserTest.incorrectInputGetInstructions.executor": "Run",
     "JUnit.InstructionParserTest.incorrectInputVerifyFormat.executor": "Run",
     "JUnit.InstructionParserTest.stringToInstructions.executor": "Run",
     "JUnit.PlateauParserTest.correctInputGetPlateauDim.executor": "Run",
@@ -62,6 +62,7 @@
     "JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.wordPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest.executor": "Run",
+    "JUnit.PlateauTest.onPlateau.executor": "Run",
     "JUnit.RoverStartParserTest.CheckRoverInBoundsTest.executor": "Run",
     "JUnit.RoverStartParserTest.WrongFormatVerifyFormat.executor": "Run",
     "JUnit.RoverStartParserTest.WrongInputFormatVerifyFormat.executor": "Run",
@@ -90,11 +91,27 @@
       <recent name="InputParsers" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="InputParsers" />
+      <recent name="Logic" />
       <recent name="" />
+      <recent name="InputParsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InstructionParserTest.incorrectInputGetInstructions">
+  <component name="RunManager" selected="JUnit.PlateauTest.onPlateau">
+    <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputParsers" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InstructionParserTest.convertingStringToInstructions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
@@ -127,22 +144,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InstructionParserTest.correctInputVerifyFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputParsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
-      <option name="METHOD_NAME" value="correctInputVerifyFormat" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InstructionParserTest.incorrectInputGetInstructions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
@@ -159,17 +160,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InstructionParserTest.stringToInstructions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlateauTest.onPlateau" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputParsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
-      <option name="METHOD_NAME" value="stringToInstructions" />
+      <option name="PACKAGE_NAME" value="logic" />
+      <option name="MAIN_CLASS_NAME" value="logic.PlateauTest" />
+      <option name="METHOD_NAME" value="onPlateau" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlateauTest.onPlateau" />
+        <item itemvalue="JUnit.InstructionParserTest" />
         <item itemvalue="JUnit.InstructionParserTest.incorrectInputGetInstructions" />
         <item itemvalue="JUnit.InstructionParserTest.correctInputGetInstructions" />
         <item itemvalue="JUnit.InstructionParserTest.convertingStringToInstructions" />
-        <item itemvalue="JUnit.InstructionParserTest.stringToInstructions" />
-        <item itemvalue="JUnit.InstructionParserTest.correctInputVerifyFormat" />
       </list>
     </recent_temporary>
   </component>

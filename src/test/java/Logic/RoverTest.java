@@ -14,10 +14,10 @@ class RoverTest {
     void driveInsideInteriorTest() throws NotDrivableLocationException {
         PlateauSize plateauSize = new PlateauSize(4, 4);
         Plateau plateau = new Plateau(plateauSize);
-        Position position1 = new Position(2,3, CompassDirection.N);
-        Position position2 = new Position(2,2, CompassDirection.S);
-        Position position3 = new Position(2,3, CompassDirection.E);
-        Position position4 = new Position(2,3, CompassDirection.W);
+        Position position1 = new Position(2, 3, CompassDirection.N);
+        Position position2 = new Position(2, 2, CompassDirection.S);
+        Position position3 = new Position(2, 3, CompassDirection.E);
+        Position position4 = new Position(2, 3, CompassDirection.W);
 
         Rover rover1 = new Rover(position1, plateau);
         Rover rover2 = new Rover(position2, plateau);
@@ -50,10 +50,10 @@ class RoverTest {
     void driveBoundaryTest() throws NotDrivableLocationException {
         PlateauSize plateauSize = new PlateauSize(4, 4);
         Plateau plateau = new Plateau(plateauSize);
-        Position position1 = new Position(0,3, CompassDirection.W);
-        Position position2 = new Position(2,0, CompassDirection.N);
-        Position position3 = new Position(2,4, CompassDirection.E);
-        Position position4 = new Position(4,3, CompassDirection.E);
+        Position position1 = new Position(0, 3, CompassDirection.W);
+        Position position2 = new Position(2, 0, CompassDirection.N);
+        Position position3 = new Position(2, 4, CompassDirection.E);
+        Position position4 = new Position(4, 3, CompassDirection.E);
 
         Rover rover1 = new Rover(position1, plateau);
         Rover rover2 = new Rover(position2, plateau);
@@ -78,16 +78,16 @@ class RoverTest {
     }
 
     @Test
-    void rotate(){
+    void rotate() {
 
         PlateauSize plateauSize = new PlateauSize(5, 3);
 
         Plateau plateau = new Plateau(plateauSize);
 
-        Position positionN = new Position(2,2, CompassDirection.N);
-        Position positionE = new Position(2,2, CompassDirection.E);
-        Position positionS = new Position(2,2, CompassDirection.S);
-        Position positionW = new Position(2,2, CompassDirection.W);
+        Position positionN = new Position(2, 2, CompassDirection.N);
+        Position positionE = new Position(2, 2, CompassDirection.E);
+        Position positionS = new Position(2, 2, CompassDirection.S);
+        Position positionW = new Position(2, 2, CompassDirection.W);
 
         Rover roverNR = new Rover(positionN, plateau);
         Rover roverNL = new Rover(positionN, plateau);
@@ -139,7 +139,7 @@ class RoverTest {
     }
 
     @Test
-    void followInstructionsTest(){
+    void followInstructionsTest() {
         PlateauSize plateauSize = new PlateauSize(5, 5);
         Plateau plateau = new Plateau(plateauSize);
 
@@ -155,7 +155,7 @@ class RoverTest {
         Rover rover5 = new Rover(position2, plateau);
 
 
-        Instruction[] input1 = new Instruction[]{Instruction.L,Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L};
+        Instruction[] input1 = new Instruction[]{Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L};
         Instruction[] input2 = new Instruction[]{Instruction.R, Instruction.R, Instruction.R, Instruction.R};
         Instruction[] input3 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M};
         Instruction[] input4 = new Instruction[]{Instruction.R, Instruction.M, Instruction.L, Instruction.M};
@@ -208,4 +208,5 @@ class RoverTest {
         assertEquals(expectedOutput5Dir, rover5.getFacing.get());
 
     }
+
 }

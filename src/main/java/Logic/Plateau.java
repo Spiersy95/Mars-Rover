@@ -3,7 +3,7 @@ package Logic;
 import InputParsers.PlateauSize;
 import InputParsers.Position;
 
-public class Plateau {
+public class Plateau implements Surface {
 
     private PlateauSize plateauSize;
 
@@ -11,7 +11,7 @@ public class Plateau {
         this.plateauSize = plateauSize;
     }
 
-    public boolean onPlateau(Position position){
+    public boolean onSurface(Position position){
         if (position.getX() < 0|| position.getY() < 0){
             return false;
         }

@@ -4,14 +4,16 @@ import InputParsers.CompassDirection;
 import InputParsers.Instruction;
 import InputParsers.Position;
 
+
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static Logic.UtilityFunctions.*;
 
 
-public class Rover {
 
+public class Rover implements Vehicle {
+
+    private String name;
     private Position position;
     private final Plateau plateau;
 
@@ -51,14 +53,15 @@ public class Rover {
                     CompassDirection.W);
         }
         assert nextPosition != null;
-        if (!this.plateau.onPlateau(nextPosition)){
+        if (!this.plateau.onSurface(nextPosition)){
             throw new NotDrivableLocationException();
         }
         this.setPosition(nextPosition);
     }
 
     public void rotate(Instruction instruction){
-        int newDirectionNumber = (directionToModulus.apply(this.getFacing.get()) + instructionToNumber.apply(instruction)) % 4;
+        int newDirectionNumber = (directionToModulus.apply(this.getFacing.get())
+                + instructionToNumber.apply(instruction)) % 4;
 
         CompassDirection newDirection = directionToModulusInverse.apply(newDirectionNumber);
         this.setPosition(new Position(this.getPosition().getX(), this.getPosition().getY(), newDirection));
@@ -74,9 +77,32 @@ public class Rover {
                 }
             }
         } catch (NotDrivableLocationException e){
-            System.out.printf("EMERGENCY STOP ROVER LOCATION X-coord: %d Y-Coord %d", this.getPosition().getX(), this.getPosition().getY());
+            System.out.println("EMERGENCY STOP!\n");
+
         }
     }
 
     Supplier<CompassDirection> getFacing = () -> this.getPosition().getFacing();
+
+    static Function<CompassDirection, Integer> directionToModulus = direction -> switch (direction) {
+        case CompassDirection.N -> 0;
+        case CompassDirection.E -> 1;
+        case CompassDirection.S -> 2;
+        case CompassDirection.W -> 3;
+    };
+
+    static Function<Integer, CompassDirection> directionToModulusInverse = number -> switch (number) {
+        case 0 -> CompassDirection.N ;
+        case 1 -> CompassDirection.E;
+        case 2 -> CompassDirection.S;
+        case 3 -> CompassDirection.W;
+
+        default -> throw new IllegalStateException("Unexpected value: " + number);
+    };
+
+    static Function<Instruction, Integer> instructionToNumber= direction -> switch (direction) {
+        case Instruction.L -> 3;
+        case Instruction.R -> 1;
+        case Instruction.M -> 0;
+    };
 }

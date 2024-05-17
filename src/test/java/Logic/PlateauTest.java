@@ -1,9 +1,8 @@
-package logic;
+package Logic;
 
 import InputParsers.CompassDirection;
 import InputParsers.PlateauSize;
 import InputParsers.Position;
-import Logic.Plateau;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

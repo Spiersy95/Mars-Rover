@@ -11,17 +11,17 @@ public class PlateauPrompter implements Prompter {
         while(true) {
             System.out.println("Please input the dimensions of the region of the exploratory mission in the following format:");
             System.out.println("[Positive between 1 and 5][space][Positive Integer between 1 and 5]");
-            System.out.println("e.g. \"2 3\" would create a plateau of 3 x 4 grid");
+            System.out.println("e.g. \"2 3\" would create a plateau of 3 x 4 grid.\n");
             try{
                 return plateauParser.getPlateauSize(scanner);
             } catch (IncorrectPlateauFormatException e) {
-                this.plateauSizeWarning();
+                this.formatWarning();
             }
         }
 
     }
 
-    public void plateauSizeWarning(){
-        System.out.println("Sorry your input was in the wrong format.");
+    public void formatWarning(){
+        System.out.println("Sorry your input was in the wrong format.\n");
     }
 }

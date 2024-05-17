@@ -96,6 +96,7 @@ class RoverStartParserTest {
         CompassDirection ExpectedOutputCompass1 = CompassDirection.N;
 
         PlateauSize plateau1 = new PlateauSize(2, 3);
+
         Position position1 = roverStartParser.getRoverStart(scanner, plateau1);
 
 

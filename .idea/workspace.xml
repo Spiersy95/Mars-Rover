@@ -5,25 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI/Prompter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/Surface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Logic/PlateauTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/UtilityFuntions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/UtilityFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/UtilityFunctions.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/Prompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/Prompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/logic/PlateauTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +31,8 @@
       <list>
         <option value="Enum" />
         <option value="Record" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
       </list>
     </option>
@@ -44,59 +40,60 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2gXmNfkM8tW4D7te10QYYuTIVq1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.InstructionParserTest.convertingStringToInstructions.executor": "Run",
-    "JUnit.InstructionParserTest.correctInputGetInstructions.executor": "Run",
-    "JUnit.InstructionParserTest.correctInputVerifyFormat.executor": "Run",
-    "JUnit.InstructionParserTest.executor": "Run",
-    "JUnit.InstructionParserTest.incorrectInputGetInstructions.executor": "Run",
-    "JUnit.InstructionParserTest.incorrectInputVerifyFormat.executor": "Run",
-    "JUnit.InstructionParserTest.stringToInstructions.executor": "Run",
-    "JUnit.PlateauParserTest.correctInputGetPlateauDim.executor": "Run",
-    "JUnit.PlateauParserTest.correctInputPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauParserTest.executor": "Run",
-    "JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauParserTest.incorrectInputGetPlateauDim.executor": "Run",
-    "JUnit.PlateauParserTest.missingInputPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauParserTest.wordPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest.executor": "Run",
-    "JUnit.PlateauTest.executor": "Run",
-    "JUnit.PlateauTest.onPlateau.executor": "Run",
-    "JUnit.RoverStartParserTest.CheckRoverInBoundsTest.executor": "Run",
-    "JUnit.RoverStartParserTest.WrongFormatVerifyFormat.executor": "Run",
-    "JUnit.RoverStartParserTest.WrongInputFormatVerifyFormat.executor": "Run",
-    "JUnit.RoverStartParserTest.correctInputVerifyFormat.executor": "Run",
-    "JUnit.RoverStartParserTest.executor": "Run",
-    "JUnit.RoverStartParserTest.getCompassDirectionsTest.executor": "Run",
-    "JUnit.RoverStartParserTest.getRoverStartTest.executor": "Run",
-    "JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest.executor": "Run",
-    "JUnit.RoverTest.driveInsideInteriorTest.executor": "Run",
-    "JUnit.RoverTest.executor": "Run",
-    "JUnit.RoverTest.rotate.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/home/speirsy/northcoders/fundamentals/mars-rover/src/main/java/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.convertingStringToInstructions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.correctInputGetInstructions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.correctInputVerifyFormat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.incorrectInputGetInstructions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.incorrectInputVerifyFormat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructionParserTest.stringToInstructions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.correctInputGetPlateauDim.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.correctInputPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.extraInputPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.incorrectInputGetPlateauDim.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.missingInputPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.wordPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlateauTest.onPlateau.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.CheckRoverInBoundsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.WrongFormatVerifyFormat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.WrongInputFormatVerifyFormat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.correctInputVerifyFormat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.getCompassDirectionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.getRoverStartTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverTest.driveInsideInteriorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverTest.followInstructionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RoverTest.rotate.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/speirsy/northcoders/fundamentals/mars-rover/src/main/java/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="InputParsers" />
@@ -115,12 +112,17 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="PlateauTest.onPlateau" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlateauTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
-      <option name="PACKAGE_NAME" value="logic" />
-      <option name="MAIN_CLASS_NAME" value="logic.PlateauTest" />
-      <option name="METHOD_NAME" value="onPlateau" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Logic" />
+      <option name="MAIN_CLASS_NAME" value="Logic.PlateauTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,7 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoverTest.driveInsideInteriorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoverTest.followInstructionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
         <pattern>
@@ -165,7 +167,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Logic" />
       <option name="MAIN_CLASS_NAME" value="Logic.RoverTest" />
-      <option name="METHOD_NAME" value="driveInsideInteriorTest" />
+      <option name="METHOD_NAME" value="followInstructionsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverTest.followInstructionsTest" />
+        <item itemvalue="JUnit.PlateauTest" />
         <item itemvalue="JUnit.RoverStartParserTest" />
         <item itemvalue="JUnit.RoverTest.rotate" />
         <item itemvalue="JUnit.RoverTest" />
-        <item itemvalue="JUnit.RoverTest.driveInsideInteriorTest" />
-        <item itemvalue="JUnit.PlateauTest.onPlateau" />
       </list>
     </recent_temporary>
   </component>

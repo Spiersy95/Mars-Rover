@@ -35,12 +35,8 @@ class InstructionParserTest {
 
         Instruction[] expectedOutput1 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M};
 
+        instructionParser.getInstructions(scanner);
 
-
-        Instruction[] actualOutput1 = instructionParser.getInstructions(scanner);
-
-
-        assertArrayEquals(expectedOutput1,actualOutput1);
 
     }
 

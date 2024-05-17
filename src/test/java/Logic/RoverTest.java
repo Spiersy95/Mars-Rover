@@ -1,6 +1,7 @@
 package Logic;
 
 import InputParsers.CompassDirection;
+import InputParsers.Instruction;
 import InputParsers.PlateauSize;
 import InputParsers.Position;
 import org.junit.jupiter.api.Test;
@@ -74,6 +75,66 @@ class RoverTest {
 
         assertThrows(Exception.class, rover4::drive);
 
+    }
 
+    @Test
+    void rotate(){
+
+        PlateauSize plateauSize = new PlateauSize(5, 3);
+
+        Plateau plateau = new Plateau(plateauSize);
+
+        Position positionN = new Position(2,2, CompassDirection.N);
+        Position positionE = new Position(2,2, CompassDirection.E);
+        Position positionS = new Position(2,2, CompassDirection.S);
+        Position positionW = new Position(2,2, CompassDirection.W);
+
+        Rover roverNR = new Rover(positionN, plateau);
+        Rover roverNL = new Rover(positionN, plateau);
+        Rover roverNM = new Rover(positionN, plateau);
+
+        Rover roverER = new Rover(positionE, plateau);
+        Rover roverEL = new Rover(positionE, plateau);
+        Rover roverEM = new Rover(positionE, plateau);
+
+        Rover roverSR = new Rover(positionS, plateau);
+        Rover roverSL = new Rover(positionS, plateau);
+        Rover roverSM = new Rover(positionS, plateau);
+
+        Rover roverWR = new Rover(positionW, plateau);
+        Rover roverWL = new Rover(positionW, plateau);
+        Rover roverWM = new Rover(positionW, plateau);
+
+        roverNR.rotate(Instruction.R);
+        roverNL.rotate(Instruction.L);
+        roverNM.rotate(Instruction.M);
+
+        roverER.rotate(Instruction.R);
+        roverEL.rotate(Instruction.L);
+        roverEM.rotate(Instruction.M);
+
+        roverSR.rotate(Instruction.R);
+        roverSL.rotate(Instruction.L);
+        roverSM.rotate(Instruction.M);
+
+        roverWR.rotate(Instruction.R);
+        roverWL.rotate(Instruction.L);
+        roverWM.rotate(Instruction.M);
+
+        assertEquals(CompassDirection.E, roverNR.getFacing.get());
+        assertEquals(CompassDirection.W, roverNL.getFacing.get());
+        assertEquals(CompassDirection.N, roverNM.getFacing.get());
+
+        assertEquals(CompassDirection.S, roverER.getFacing.get());
+        assertEquals(CompassDirection.N, roverEL.getFacing.get());
+        assertEquals(CompassDirection.E, roverEM.getFacing.get());
+
+        assertEquals(CompassDirection.W, roverSR.getFacing.get());
+        assertEquals(CompassDirection.E, roverSL.getFacing.get());
+        assertEquals(CompassDirection.S, roverSM.getFacing.get());
+
+        assertEquals(CompassDirection.N, roverWR.getFacing.get());
+        assertEquals(CompassDirection.S, roverWL.getFacing.get());
+        assertEquals(CompassDirection.W, roverWM.getFacing.get());
     }
 }

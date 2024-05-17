@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/NotDrivableLocationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/UtilityFuntions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
@@ -68,6 +68,7 @@
     "JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest.executor": "Run",
     "JUnit.RoverTest.driveInsideInteriorTest.executor": "Run",
     "JUnit.RoverTest.executor": "Run",
+    "JUnit.RoverTest.rotate.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -85,6 +86,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Logic" />
       <recent name="InputParsers" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -93,7 +95,7 @@
       <recent name="InputParsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoverTest">
+  <component name="RunManager" selected="JUnit.RoverTest.rotate">
     <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
@@ -105,22 +107,6 @@
       <option name="PACKAGE_NAME" value="InputParsers" />
       <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InstructionParserTest.incorrectInputGetInstructions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputParsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
-      <option name="METHOD_NAME" value="incorrectInputGetInstructions" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,13 +152,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoverTest.rotate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Logic" />
+      <option name="MAIN_CLASS_NAME" value="Logic.RoverTest" />
+      <option name="METHOD_NAME" value="rotate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverTest.rotate" />
         <item itemvalue="JUnit.RoverTest" />
         <item itemvalue="JUnit.RoverTest.driveInsideInteriorTest" />
         <item itemvalue="JUnit.PlateauTest.onPlateau" />
         <item itemvalue="JUnit.InstructionParserTest" />
-        <item itemvalue="JUnit.InstructionParserTest.incorrectInputGetInstructions" />
       </list>
     </recent_temporary>
   </component>
@@ -186,5 +188,16 @@
       <updated>1715852262057</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Logic/RoverTest.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

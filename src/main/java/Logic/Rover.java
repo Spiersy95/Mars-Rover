@@ -5,7 +5,10 @@ import InputParsers.Instruction;
 import InputParsers.Position;
 
 import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+import static Logic.UtilityFuntions.*;
+
 
 public class Rover {
 
@@ -27,22 +30,22 @@ public class Rover {
 
     public void drive() throws NotDrivableLocationException {
         Position nextPosition = null;
-        if (getfacing.apply(this)== CompassDirection.N) {
+        if (getFacing.get()== CompassDirection.N) {
                 nextPosition = new Position(this.getPosition().getX(),
                         this.getPosition().getY()+1,
                         CompassDirection.N);
         }
-        if (getfacing.apply(this) == CompassDirection.E){
+        if (getFacing.get() == CompassDirection.E){
             nextPosition = new Position(this.getPosition().getX()+1,
                     this.getPosition().getY(),
                     CompassDirection.E);
         }
-        if (getfacing.apply(this) == CompassDirection.S) {
+        if (getFacing.get() == CompassDirection.S) {
             nextPosition = new Position(this.getPosition().getX(),
                     this.getPosition().getY() - 1,
                     CompassDirection.S);
         }
-        if (getfacing.apply(this) == CompassDirection.W) {
+        if (getFacing.get() == CompassDirection.W) {
             nextPosition = new Position(this.getPosition().getX() - 1,
                     this.getPosition().getY(),
                     CompassDirection.W);
@@ -54,5 +57,12 @@ public class Rover {
         this.setPosition(nextPosition);
     }
 
-    Function<Rover, CompassDirection> getfacing = rover -> rover.getPosition().getFacing();
+    public void rotate(Instruction instruction){
+        int newDirectionNumber = (directionToModulus.apply(this.getFacing.get()) + instructionToNumber.apply(instruction)) % 4;
+
+        CompassDirection newDirection = directionToModulusInverse.apply(newDirectionNumber);
+        this.setPosition(new Position(this.getPosition().getX(), this.getPosition().getY(), newDirection));
+    }
+
+    Supplier<CompassDirection> getFacing = () -> this.getPosition().getFacing();
 }

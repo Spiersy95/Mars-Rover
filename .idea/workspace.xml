@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Logic/UtilityFuntions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/Prompter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/UtilityFuntions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/UtilityFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +35,9 @@
       <list>
         <option value="Enum" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,6 +72,7 @@
     "JUnit.PlateauParserTest.noNegativeInputPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.wordPlateauFormatVerifyTest.executor": "Run",
     "JUnit.PlateauParserTest.zeroStartPlateauFormatVerifyTest.executor": "Run",
+    "JUnit.PlateauTest.executor": "Run",
     "JUnit.PlateauTest.onPlateau.executor": "Run",
     "JUnit.RoverStartParserTest.CheckRoverInBoundsTest.executor": "Run",
     "JUnit.RoverStartParserTest.WrongFormatVerifyFormat.executor": "Run",
@@ -75,7 +91,10 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/home/speirsy/northcoders/fundamentals/mars-rover/src/main/java/Main.java"
+    "onboarding.tips.debug.path": "/home/speirsy/northcoders/fundamentals/mars-rover/src/main/java/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,28 +114,28 @@
       <recent name="InputParsers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RoverTest.rotate">
-    <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputParsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="PlateauTest.onPlateau" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <option name="PACKAGE_NAME" value="logic" />
       <option name="MAIN_CLASS_NAME" value="logic.PlateauTest" />
       <option name="METHOD_NAME" value="onPlateau" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoverStartParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.RegionData" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputParsers" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverStartParserTest" />
         <item itemvalue="JUnit.RoverTest.rotate" />
         <item itemvalue="JUnit.RoverTest" />
         <item itemvalue="JUnit.RoverTest.driveInsideInteriorTest" />
         <item itemvalue="JUnit.PlateauTest.onPlateau" />
-        <item itemvalue="JUnit.InstructionParserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -188,16 +207,5 @@
       <updated>1715852262057</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Logic/RoverTest.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

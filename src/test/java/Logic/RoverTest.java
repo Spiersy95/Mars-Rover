@@ -137,4 +137,75 @@ class RoverTest {
         assertEquals(CompassDirection.S, roverWL.getFacing.get());
         assertEquals(CompassDirection.W, roverWM.getFacing.get());
     }
+
+    @Test
+    void followInstructionsTest(){
+        PlateauSize plateauSize = new PlateauSize(5, 5);
+        Plateau plateau = new Plateau(plateauSize);
+
+        Position position1 = new Position(2, 4, CompassDirection.N);
+        Position position2 = new Position(0, 0, CompassDirection.W);
+        Position position3 = new Position(0, 3, CompassDirection.E);
+        Position position4 = new Position(2, 0, CompassDirection.N);
+
+        Rover rover1 = new Rover(position1, plateau);
+        Rover rover2 = new Rover(position2, plateau);
+        Rover rover3 = new Rover(position3, plateau);
+        Rover rover4 = new Rover(position4, plateau);
+        Rover rover5 = new Rover(position2, plateau);
+
+
+        Instruction[] input1 = new Instruction[]{Instruction.L,Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L};
+        Instruction[] input2 = new Instruction[]{Instruction.R, Instruction.R, Instruction.R, Instruction.R};
+        Instruction[] input3 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M};
+        Instruction[] input4 = new Instruction[]{Instruction.R, Instruction.M, Instruction.L, Instruction.M};
+        Instruction[] input5 = new Instruction[]{};
+
+        int expectedOutput1x = 2;
+        int expectedOutput1y = 4;
+        CompassDirection expectedOutput1Dir = CompassDirection.S;
+
+        int expectedOutput2x = 0;
+        int expectedOutput2y = 0;
+        CompassDirection expectedOutput2Dir = CompassDirection.W;
+
+        int expectedOutput3x = 5;
+        int expectedOutput3y = 3;
+        CompassDirection expectedOutput3Dir = CompassDirection.E;
+
+        int expectedOutput4x = 3;
+        int expectedOutput4y = 1;
+        CompassDirection expectedOutput4Dir = CompassDirection.N;
+
+        int expectedOutput5x = 0;
+        int expectedOutput5y = 0;
+        CompassDirection expectedOutput5Dir = CompassDirection.W;
+
+        rover1.followInstructions(input1);
+        rover2.followInstructions(input2);
+        rover3.followInstructions(input3);
+        rover4.followInstructions(input4);
+        rover5.followInstructions(input5);
+
+        assertEquals(expectedOutput1x, rover1.getPosition().getX());
+        assertEquals(expectedOutput1y, rover1.getPosition().getY());
+        assertEquals(expectedOutput1Dir, rover1.getFacing.get());
+
+        assertEquals(expectedOutput2x, rover2.getPosition().getX());
+        assertEquals(expectedOutput2y, rover2.getPosition().getY());
+        assertEquals(expectedOutput2Dir, rover2.getFacing.get());
+
+        assertEquals(expectedOutput3x, rover3.getPosition().getX());
+        assertEquals(expectedOutput3y, rover3.getPosition().getY());
+        assertEquals(expectedOutput3Dir, rover3.getFacing.get());
+
+        assertEquals(expectedOutput4x, rover4.getPosition().getX());
+        assertEquals(expectedOutput4y, rover4.getPosition().getY());
+        assertEquals(expectedOutput4Dir, rover4.getFacing.get());
+
+        assertEquals(expectedOutput5x, rover5.getPosition().getX());
+        assertEquals(expectedOutput5y, rover5.getPosition().getY());
+        assertEquals(expectedOutput5Dir, rover5.getFacing.get());
+
+    }
 }

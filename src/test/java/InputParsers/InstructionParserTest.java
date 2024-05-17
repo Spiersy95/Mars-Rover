@@ -12,7 +12,7 @@ class InstructionParserTest {
     InstructionParser instructionParser = new InstructionParser();
 
     @Test
-    void correctInputGetInstructions() {
+    void correctInputGetInstructions() throws InvalidInstructionsException {
         Scanner scanner = new Scanner("LMR\nMMMM\n\n");
 
         Instruction[] expectedOutput1 = new Instruction[]{Instruction.L, Instruction.M, Instruction.R};
@@ -29,7 +29,7 @@ class InstructionParserTest {
     }
 
     @Test
-    void incorrectInputGetInstructions() {
+    void incorrectInputGetInstructions() throws InvalidInstructionsException {
         Scanner scanner = new Scanner("L R\nKE\n \nLLMMNNEEE\nMMMM");
 
 

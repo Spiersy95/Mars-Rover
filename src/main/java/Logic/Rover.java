@@ -7,7 +7,7 @@ import InputParsers.Position;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static Logic.UtilityFuntions.*;
+import static Logic.UtilityFunctions.*;
 
 
 public class Rover {
@@ -62,6 +62,20 @@ public class Rover {
 
         CompassDirection newDirection = directionToModulusInverse.apply(newDirectionNumber);
         this.setPosition(new Position(this.getPosition().getX(), this.getPosition().getY(), newDirection));
+    }
+
+    public void followInstructions(Instruction[] instructions) {
+        try {
+            for (int i = 0; i < instructions.length; i++) {
+                if(instructions[i] == Instruction.M){
+                    this.drive();
+                } else {
+                    this.rotate(instructions[i]);
+                }
+            }
+        } catch (NotDrivableLocationException e){
+            System.out.printf("EMERGENCY STOP ROVER LOCATION X-coord: %d Y-Coord %d", this.getPosition().getX(), this.getPosition().getY());
+        }
     }
 
     Supplier<CompassDirection> getFacing = () -> this.getPosition().getFacing();

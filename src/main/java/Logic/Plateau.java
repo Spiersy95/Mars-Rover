@@ -15,6 +15,6 @@ public class Plateau {
         if (position.getX() < 0|| position.getY() < 0){
             return false;
         }
-        return position.getX() <= this.plateauSize.getWidth() && position.getY() <= this.plateauSize.getLength();
+        return position.getX() <= this.plateauSize.width() && position.getY() <= this.plateauSize.length();
     }
 }

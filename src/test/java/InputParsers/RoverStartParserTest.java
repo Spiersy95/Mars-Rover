@@ -13,7 +13,7 @@ class RoverStartParserTest {
     RoverStartParser roverStartParser = new RoverStartParser();
 
     @Test
-    void correctInputGetRoverStartTest(){
+    void correctInputGetRoverStartTest() throws NotInPlateauException, IncorrectStartingPositionFormatException {
 
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("5 2 N\n2 3 E\n0 0 W\n2 1 S".getBytes());
@@ -83,7 +83,7 @@ class RoverStartParserTest {
     }
 
     @Test
-    void incorrectInputGetRoverStartTest() {
+    void incorrectInputGetRoverStartTest() throws NotInPlateauException, IncorrectStartingPositionFormatException {
 
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("5 2 N\n4 3 F\n0   0 W\n2 3 N".getBytes());

@@ -12,7 +12,7 @@ class PlateauParserTest {
 
     PlateauParser plateauParser = new PlateauParser();
     @Test
-    void correctInputGetPlateauDim() {
+    void correctInputGetPlateauDim() throws IncorrectPlateauFormatException {
 
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("5 2\n2 3".getBytes());
@@ -28,10 +28,10 @@ class PlateauParserTest {
         PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
         PlateauSize plateau2 = plateauParser.getPlateauSize(scanner);
 
-        int actualOutput1x = plateau1.getWidth();
-        int actualOutput1y = plateau1.getLength();
-        int actualOutput2x = plateau2.getWidth();
-        int actualOutput2y = plateau2.getLength();
+        int actualOutput1x = plateau1.width();
+        int actualOutput1y = plateau1.length();
+        int actualOutput2x = plateau2.width();
+        int actualOutput2y = plateau2.length();
 
 
         assertEquals(ExpectedOutput1x, actualOutput1x);
@@ -44,7 +44,7 @@ class PlateauParserTest {
     }
 
     @Test
-    void incorrectInputGetPlateauDim() {
+    void incorrectInputGetPlateauDim() throws IncorrectPlateauFormatException {
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("Hello\n0 0\n-444\n-3 -3\n2 3".getBytes());
         System.setIn(in);
@@ -56,8 +56,8 @@ class PlateauParserTest {
         PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
 
 
-        int actualOutput1x = plateau1.getWidth();
-        int actualOutput1y = plateau1.getLength();
+        int actualOutput1x = plateau1.width();
+        int actualOutput1y = plateau1.length();
 
 
 

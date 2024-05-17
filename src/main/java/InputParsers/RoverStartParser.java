@@ -9,56 +9,37 @@ import java.util.regex.Pattern;
 
 public class RoverStartParser extends Parser {
 
-    public Position getRoverStart(Scanner scanner, PlateauSize plateauSize){
-        while(true){
-            try {
+    public Position getRoverStart(Scanner scanner, PlateauSize plateauSize) throws IncorrectStartingPositionFormatException, NotInPlateauException {
+        String roverStartPositionInput = scanner.nextLine();
+        if (verifyFormat.test(roverStartPositionInput)){
+            String[] roverStartPositionArray = roverStartPositionInput.split(" ");
+            int roverXCoord = Integer.parseInt(roverStartPositionArray[0]);
+            int roverYCoord = Integer.parseInt(roverStartPositionArray[1]);
+            CompassDirection roverDirection = getCompassDirection.apply(roverStartPositionArray[2]);
 
-                System.out.println("Please give a starting location of your rover in the following format");
-                System.out.println("PositiveInteger PositiveInteger CompassDirections");
-
-                String roverStartPositionInput = scanner.nextLine();
-
-
-                if (verifyFormat.test(roverStartPositionInput)){
-
-                    String[] roverStartPositionArray = roverStartPositionInput.split(" ");
-                    int roverXCoord = Integer.parseInt(roverStartPositionArray[0]);
-                    int roverYCoord = Integer.parseInt(roverStartPositionArray[1]);
-                    CompassDirection roverDirection = getCompassDirection.apply(roverStartPositionArray[2]);
-
-                    if (checkRoverInBounds.test(roverXCoord, plateauSize.getWidth())
-                            && checkRoverInBounds.test(roverYCoord, plateauSize.getLength())){
-                        return new Position(roverXCoord, roverYCoord, roverDirection);
-                    } else {
-                        throw new NotInPlateauException();
-                    }
-                } else {
-
-                    throw new IncorrectStartingPositionFormatException();
-
-                }
-            } catch (IncorrectStartingPositionFormatException e) {
-                System.out.println("Sorry your input was in the wrong format.");
-
-            } catch (NotInPlateauException e) {
-                System.out.println("Sorry this is not a valid starting location for our research.");
+            if (checkRoverInBounds.test(roverXCoord, plateauSize.width())
+                    && checkRoverInBounds.test(roverYCoord, plateauSize.length())){
+                return new Position(roverXCoord, roverYCoord, roverDirection);
+            } else {
+                throw new NotInPlateauException();
             }
-
-
-
+        } else {
+            throw new IncorrectStartingPositionFormatException();
         }
     }
 
-    static Predicate<String> verifyFormat = input -> Parser.verifyFormat.test("[0-5]\s[0-5]\s[NSWE]", input);
+    static Predicate<String> verifyFormat = input -> {
+        Pattern pattern = Pattern.compile("[0-5]\\s[0-5]\\s[NSWE]");
+        Matcher match = pattern.matcher(input);
+        return match.matches();
+    };
 
-    static Function<String, CompassDirection> getCompassDirection = input -> {
-        return switch (input) {
-            case "N" -> CompassDirection.N;
-            case "E" -> CompassDirection.E;
-            case "S" -> CompassDirection.S;
-            case "W" -> CompassDirection.W;
-            default -> null;
-        };
+    static Function<String, CompassDirection> getCompassDirection = input -> switch (input) {
+        case "N" -> CompassDirection.N;
+        case "E" -> CompassDirection.E;
+        case "S" -> CompassDirection.S;
+        case "W" -> CompassDirection.W;
+        default -> null;
     };
 
     static BiPredicate<Integer, Integer> checkRoverInBounds = (location, plateauDim) -> location <= plateauDim;

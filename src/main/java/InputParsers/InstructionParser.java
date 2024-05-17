@@ -8,24 +8,12 @@ import java.util.function.Predicate;
 
 public class InstructionParser extends Parser {
 
-    public Instruction[] getInstructions(Scanner scanner){
-        while(true){
-            try {
-                System.out.println("Please input a string of instructions:");
-                System.out.println("L - Rotates the rover anti-clockwise 90 degrees.");
-                System.out.println("R - Rotates the rover clockwise 90 degrees.");
-                System.out.println("M - Moves the rover forward.");
-                String instructionInput = scanner.nextLine();
-                if (verifyFormat.test(instructionInput)){
-                    return this.stringToInstructions(instructionInput);
-                } else {
-                    throw new InvalidInstructionsException();
-                }
-            } catch (InvalidInstructionsException e) {
-                System.out.println("Sorry this is an invalid set of Instructions");
-            }
-
-
+    public Instruction[] getInstructions(Scanner scanner) throws InvalidInstructionsException {
+        String instructionInput = scanner.nextLine();
+        if (verifyFormat.test(instructionInput)){
+            return this.stringToInstructions(instructionInput);
+        } else {
+            throw new InvalidInstructionsException();
         }
     }
 
@@ -37,7 +25,7 @@ public class InstructionParser extends Parser {
         return instructions;
     }
 
-    static Predicate<String> verifyFormat = input -> Parser.verifyFormat.test("[LMR]*", input);
+    static Predicate<String> verifyFormat = input -> Parser.verifyFormat("[LMR]*", input);
 
     static Function<String, Instruction> convertingStringToInstruction = input -> switch (input) {
         case "L" -> Instruction.L;

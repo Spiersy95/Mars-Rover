@@ -1,6 +1,6 @@
 package InputParsers;
 
-public class Position {
+public class Position{
 
     private int x;
     private int y;

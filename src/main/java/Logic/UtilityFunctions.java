@@ -5,7 +5,7 @@ import InputParsers.Instruction;
 
 import java.util.function.Function;
 
-public class UtilityFuntions {
+public class UtilityFunctions {
 
     static Function<CompassDirection, Integer> directionToModulus = direction -> switch (direction) {
         case CompassDirection.N -> 0;

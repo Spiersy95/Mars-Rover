@@ -1,25 +1,23 @@
 package InputParsers;
 
+import UI.RoverStartPrompter;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.Scanner;
 
-import static InputParsers.RoverStartParser.*;
+import static InputParsers.RoverStartParser.checkRoverInBounds;
+import static InputParsers.RoverStartParser.getCompassDirection;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverStartParserTest {
-    RoverStartParser roverStartParser = new RoverStartParser();
 
     @Test
     void correctInputGetRoverStartTest() throws NotInPlateauException, IncorrectStartingPositionFormatException {
 
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
-        ByteArrayInputStream in = new ByteArrayInputStream("5 2 N\n2 3 E\n0 0 W\n2 1 S".getBytes());
-        System.setIn(in);
+        RoverStartParser roverStartParser = new RoverStartParser();
 
-        Scanner scanner = new Scanner(System.in);
+
+        Scanner scanner = new Scanner("5 2 N\n2 3 E\n0 0 W\n2 1 S");
 
         int ExpectedOutput1x = 5;
         int ExpectedOutput1y = 2;
@@ -79,23 +77,26 @@ class RoverStartParserTest {
         assertEquals(ExpectedOutput4y, actualOutput4y);
         assertEquals(ExpectedOutputCompass4, actualOutputFacing4);
         scanner.close();
-        System.setIn(sysInBackup);
+
     }
 
     @Test
     void incorrectInputGetRoverStartTest() throws NotInPlateauException, IncorrectStartingPositionFormatException {
 
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
-        ByteArrayInputStream in = new ByteArrayInputStream("5 2 N\n4 3 F\n0   0 W\n2 3 N".getBytes());
-        System.setIn(in);
+        RoverStartParser roverStartParser = new RoverStartParser();
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner("5 2 N\n4 3 F\n0   0 W\n2 3 N");
 
         int ExpectedOutput1x = 2;
         int ExpectedOutput1y = 3;
         CompassDirection ExpectedOutputCompass1 = CompassDirection.N;
 
         PlateauSize plateau1 = new PlateauSize(2, 3);
+
+        assertThrows(NotInPlateauException.class, () -> roverStartParser.getRoverStart(scanner, plateau1));
+        assertThrows(IncorrectStartingPositionFormatException.class, () -> roverStartParser.getRoverStart(scanner, plateau1));
+        assertThrows(IncorrectStartingPositionFormatException.class, () -> roverStartParser.getRoverStart(scanner, plateau1));
+
 
         Position position1 = roverStartParser.getRoverStart(scanner, plateau1);
 
@@ -108,7 +109,6 @@ class RoverStartParserTest {
         assertEquals(ExpectedOutput1y, actualOutput1y);
         assertEquals(ExpectedOutputCompass1, actualOutputFacing1);
         scanner.close();
-        System.setIn(sysInBackup);
     }
 
     @Test
@@ -170,5 +170,4 @@ class RoverStartParserTest {
         assertTrue(checkRoverInBounds.test(inputNum2, inputBound2));
         assertFalse(checkRoverInBounds.test(inputNum3, inputBound3));
     }
-
 }

@@ -29,11 +29,11 @@ public class Main {
         Plateau plateau = new Plateau(plateauSize);
 
         roverPosition = roverStartPrompter.prompt(scanner, roverStartParser, plateauSize);
-        Rover rover = new Rover(roverPosition, plateau);
+        Rover rover = new Rover(roverPosition);
 
         Instruction[] instructions = instructionPrompter.prompt(scanner, instructionParser);
-        rover.followInstructions(instructions);
+        rover.followInstructions(instructions, plateau);
 
-        System.out.printf("Rover is at position %s %s %s", rover.getPosition().getX(), rover.getPosition().getY(), rover.getPosition().getFacing() );
+        System.out.printf("\nRover is at position %s %s %s", rover.getPosition().getX(), rover.getPosition().getY(), rover.getPosition().getFacing() );
     }
 }

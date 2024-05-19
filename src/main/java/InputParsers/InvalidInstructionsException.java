@@ -1,4 +1,4 @@
 package InputParsers;
 
-public class InvalidInstructionsException extends Exception{
+public class InvalidInstructionsException extends Exception {
 }

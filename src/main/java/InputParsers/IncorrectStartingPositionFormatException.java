@@ -1,4 +1,4 @@
 package InputParsers;
 
-public class IncorrectStartingPositionFormatException extends Exception{
+public class IncorrectStartingPositionFormatException extends Exception {
 }

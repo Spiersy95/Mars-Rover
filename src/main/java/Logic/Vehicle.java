@@ -1,6 +1,9 @@
 package Logic;
 
+import InputParsers.Position;
+
 public interface Vehicle {
 
-    void drive() throws NotDrivableLocationException;
+
+    void drive(Surface surface) throws NotDrivableLocationException;
 }

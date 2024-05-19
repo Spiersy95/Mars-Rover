@@ -8,7 +8,7 @@ public class RoverStartPrompter {
 
     public Position prompt(Scanner scanner, RoverStartParser roverStartParser, PlateauSize plateauSize) {
         while (true) {
-            System.out.println("Please give a starting location of your rover in the following format");
+            System.out.println("\nPlease give a starting location of your rover in the following format");
             System.out.println("[X-Coordinate][space][Y-Coordinate][space][FirstLetter of CardinalDirection]");
             System.out.println("e.g. \"2 4 N\" would place the rover at the coordinate (2,4) facing north.\n");
 
@@ -24,12 +24,12 @@ public class RoverStartPrompter {
     }
 
     public void notInPlateauWarning() {
-        System.out.println("Sorry this is not a valid starting location for our research.\n");
+        System.out.println("\nSorry this is not a valid starting location for our research.\n");
 
     }
 
     public void formatWarning() {
-        System.out.println("Sorry your input was in the wrong format.\n");
+        System.out.println("\nSorry your input was in the wrong format.\n");
 
     }
 

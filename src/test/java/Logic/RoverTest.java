@@ -12,22 +12,28 @@ class RoverTest {
 
     @Test
     void driveInsideInteriorTest() throws NotDrivableLocationException {
-        PlateauSize plateauSize = new PlateauSize(4, 4);
-        Plateau plateau = new Plateau(plateauSize);
         Position position1 = new Position(2, 3, CompassDirection.N);
         Position position2 = new Position(2, 2, CompassDirection.S);
         Position position3 = new Position(2, 3, CompassDirection.E);
         Position position4 = new Position(2, 3, CompassDirection.W);
 
-        Rover rover1 = new Rover(position1, plateau);
-        Rover rover2 = new Rover(position2, plateau);
-        Rover rover3 = new Rover(position3, plateau);
-        Rover rover4 = new Rover(position4, plateau);
+        Rover rover1 = new Rover(position1);
+        Rover rover2 = new Rover(position2);
+        Rover rover3 = new Rover(position3);
+        Rover rover4 = new Rover(position4);
 
-        rover1.drive();
-        rover2.drive();
-        rover3.drive();
-        rover4.drive();
+        PlateauSize plateauSize = new PlateauSize(4, 4);
+        Plateau plateau = new Plateau(plateauSize);
+
+        plateau.addVehicleToSurface(rover1);
+        plateau.addVehicleToSurface(rover2);
+        plateau.addVehicleToSurface(rover3);
+        plateau.addVehicleToSurface(rover4);
+
+        rover1.drive(plateau);
+        rover2.drive(plateau);
+        rover3.drive(plateau);
+        rover4.drive(plateau);
 
         assertEquals(2, rover1.getPosition().getX());
         assertEquals(4, rover1.getPosition().getY());
@@ -55,25 +61,30 @@ class RoverTest {
         Position position3 = new Position(2, 4, CompassDirection.E);
         Position position4 = new Position(4, 3, CompassDirection.E);
 
-        Rover rover1 = new Rover(position1, plateau);
-        Rover rover2 = new Rover(position2, plateau);
-        Rover rover3 = new Rover(position3, plateau);
-        Rover rover4 = new Rover(position4, plateau);
+        Rover rover1 = new Rover(position1);
+        Rover rover2 = new Rover(position2);
+        Rover rover3 = new Rover(position3);
+        Rover rover4 = new Rover(position4);
 
-        assertThrows(Exception.class, rover1::drive);
+        plateau.addVehicleToSurface(rover1);
+        plateau.addVehicleToSurface(rover2);
+        plateau.addVehicleToSurface(rover3);
+        plateau.addVehicleToSurface(rover4);
 
-        rover2.drive();
+        assertThrows(Exception.class, () -> rover1.drive(plateau));
+
+        rover2.drive(plateau);
         assertEquals(2, rover2.getPosition().getX());
         assertEquals(1, rover2.getPosition().getY());
         assertEquals(CompassDirection.N, rover2.getPosition().getFacing());
 
 
-        rover3.drive();
+        rover3.drive(plateau);
         assertEquals(3, rover3.getPosition().getX());
         assertEquals(4, rover3.getPosition().getY());
         assertEquals(CompassDirection.E, rover3.getPosition().getFacing());
 
-        assertThrows(Exception.class, rover4::drive);
+        assertThrows(Exception.class, () ->  rover4.drive(plateau));
 
     }
 
@@ -89,21 +100,40 @@ class RoverTest {
         Position positionS = new Position(2, 2, CompassDirection.S);
         Position positionW = new Position(2, 2, CompassDirection.W);
 
-        Rover roverNR = new Rover(positionN, plateau);
-        Rover roverNL = new Rover(positionN, plateau);
-        Rover roverNM = new Rover(positionN, plateau);
+        Rover roverNR = new Rover(positionN);
+        Rover roverNL = new Rover(positionN);
+        Rover roverNM = new Rover(positionN);
 
-        Rover roverER = new Rover(positionE, plateau);
-        Rover roverEL = new Rover(positionE, plateau);
-        Rover roverEM = new Rover(positionE, plateau);
+        Rover roverER = new Rover(positionE);
+        Rover roverEL = new Rover(positionE);
+        Rover roverEM = new Rover(positionE);
 
-        Rover roverSR = new Rover(positionS, plateau);
-        Rover roverSL = new Rover(positionS, plateau);
-        Rover roverSM = new Rover(positionS, plateau);
+        Rover roverSR = new Rover(positionS);
+        Rover roverSL = new Rover(positionS);
+        Rover roverSM = new Rover(positionS);
 
-        Rover roverWR = new Rover(positionW, plateau);
-        Rover roverWL = new Rover(positionW, plateau);
-        Rover roverWM = new Rover(positionW, plateau);
+        Rover roverWR = new Rover(positionW);
+        Rover roverWL = new Rover(positionW);
+        Rover roverWM = new Rover(positionW);
+
+        plateau.addVehicleToSurface(roverNR);
+        plateau.addVehicleToSurface(roverNL);
+        plateau.addVehicleToSurface(roverNM);
+
+        plateau.addVehicleToSurface(roverER);
+        plateau.addVehicleToSurface(roverEL);
+        plateau.addVehicleToSurface(roverEM);
+
+        plateau.addVehicleToSurface(roverSR);
+        plateau.addVehicleToSurface(roverSL);
+        plateau.addVehicleToSurface(roverSM);
+
+        plateau.addVehicleToSurface(roverWR);
+        plateau.addVehicleToSurface(roverWL);
+        plateau.addVehicleToSurface(roverWM);
+
+
+
 
         roverNR.rotate(Instruction.R);
         roverNL.rotate(Instruction.L);
@@ -148,11 +178,16 @@ class RoverTest {
         Position position3 = new Position(0, 3, CompassDirection.E);
         Position position4 = new Position(2, 0, CompassDirection.N);
 
-        Rover rover1 = new Rover(position1, plateau);
-        Rover rover2 = new Rover(position2, plateau);
-        Rover rover3 = new Rover(position3, plateau);
-        Rover rover4 = new Rover(position4, plateau);
-        Rover rover5 = new Rover(position2, plateau);
+        Rover rover1 = new Rover(position1);
+        Rover rover2 = new Rover(position2);
+        Rover rover3 = new Rover(position3);
+        Rover rover4 = new Rover(position4);
+        Rover rover5 = new Rover(position2);
+
+        plateau.addVehicleToSurface(rover1);
+        plateau.addVehicleToSurface(rover2);
+        plateau.addVehicleToSurface(rover3);
+        plateau.addVehicleToSurface(rover4);
 
 
         Instruction[] input1 = new Instruction[]{Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L};
@@ -181,11 +216,11 @@ class RoverTest {
         int expectedOutput5y = 0;
         CompassDirection expectedOutput5Dir = CompassDirection.W;
 
-        rover1.followInstructions(input1);
-        rover2.followInstructions(input2);
-        rover3.followInstructions(input3);
-        rover4.followInstructions(input4);
-        rover5.followInstructions(input5);
+        rover1.followInstructions(input1, plateau);
+        rover2.followInstructions(input2, plateau);
+        rover3.followInstructions(input3, plateau);
+        rover4.followInstructions(input4, plateau);
+        rover5.followInstructions(input5, plateau);
 
         assertEquals(expectedOutput1x, rover1.getPosition().getX());
         assertEquals(expectedOutput1y, rover1.getPosition().getY());

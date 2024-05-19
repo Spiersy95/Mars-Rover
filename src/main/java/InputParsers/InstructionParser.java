@@ -4,9 +4,7 @@ import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-
-
-public class InstructionParser extends Parser {
+public class InstructionParser extends Parser{
 
     public Instruction[] getInstructions(Scanner scanner) throws InvalidInstructionsException {
         String instructionInput = scanner.nextLine();
@@ -25,7 +23,7 @@ public class InstructionParser extends Parser {
         return instructions;
     }
 
-    static Predicate<String> verifyFormat = input -> Parser.verifyFormat("[LMR]*", input);
+    public static Predicate<String> verifyFormat = input -> Parser.verifyFormat("[LMR]*", input);
 
     static Function<String, Instruction> convertingStringToInstruction = input -> switch (input) {
         case "L" -> Instruction.L;

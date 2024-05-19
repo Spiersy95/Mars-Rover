@@ -1,24 +1,21 @@
 package InputParsers;
 
+import UI.PlateauPrompter;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlateauParserTest {
 
-    PlateauParser plateauParser = new PlateauParser();
     @Test
     void correctInputGetPlateauDim() throws IncorrectPlateauFormatException {
 
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
-        ByteArrayInputStream in = new ByteArrayInputStream("5 2\n2 3".getBytes());
-        System.setIn(in);
+        PlateauParser plateauParser = new PlateauParser();
 
-        Scanner scanner = new Scanner(System.in);
+
+        Scanner scanner = new Scanner("5 2\n2 3");
 
         int ExpectedOutput1x = 5;
         int ExpectedOutput1y = 2;
@@ -40,20 +37,25 @@ class PlateauParserTest {
         assertEquals(ExpectedOutput2y, actualOutput2y);
 
         scanner.close();
-        System.setIn(sysInBackup);
+
     }
 
     @Test
     void incorrectInputGetPlateauDim() throws IncorrectPlateauFormatException {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
-        ByteArrayInputStream in = new ByteArrayInputStream("Hello\n0 0\n-444\n-3 -3\n2 3".getBytes());
-        System.setIn(in);
-        Scanner scanner = new Scanner(System.in);
+        PlateauParser plateauParser = new PlateauParser();
+
+        Scanner scanner = new Scanner("Hello\n0 0\n-444\n-3 -3\n2 3");
 
         int ExpectedOutput1x = 2;
         int ExpectedOutput1y = 3;
 
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
+
         PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
+
 
 
         int actualOutput1x = plateau1.width();
@@ -65,9 +67,8 @@ class PlateauParserTest {
         assertEquals(ExpectedOutput1y, actualOutput1y);
 
         scanner.close();
-        System.setIn(sysInBackup);
-    }
 
+    }
 
     @Test
     void correctInputPlateauFormatVerifyTest(){
@@ -151,7 +152,4 @@ class PlateauParserTest {
         assertFalse(PlateauParser.verifyFormat.test(input2));
         assertFalse(PlateauParser.verifyFormat.test(input3));
     }
-
-
-
 }

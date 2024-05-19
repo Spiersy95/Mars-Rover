@@ -15,11 +15,10 @@ public class Rover implements Vehicle {
 
     private String name;
     private Position position;
-    private final Plateau plateau;
 
-    public Rover(Position position, Plateau plateau){
+    public Rover(Position position){
+        this.name = name;
         this.position = position;
-        this.plateau = plateau;
     }
 
     public Position getPosition() {
@@ -30,7 +29,10 @@ public class Rover implements Vehicle {
         this.position = position;
     }
 
-    public void drive() throws NotDrivableLocationException {
+    public void drive(Surface surface) throws NotDrivableLocationException {
+        if (!surface.isVehicleOnSurface(this)){
+            throw new NotDrivableLocationException();
+        }
         Position nextPosition = null;
         if (getFacing.get()== CompassDirection.N) {
                 nextPosition = new Position(this.getPosition().getX(),
@@ -53,7 +55,7 @@ public class Rover implements Vehicle {
                     CompassDirection.W);
         }
         assert nextPosition != null;
-        if (!this.plateau.onSurface(nextPosition)){
+        if (!surface.onSurface(nextPosition)){
             throw new NotDrivableLocationException();
         }
         this.setPosition(nextPosition);
@@ -67,17 +69,17 @@ public class Rover implements Vehicle {
         this.setPosition(new Position(this.getPosition().getX(), this.getPosition().getY(), newDirection));
     }
 
-    public void followInstructions(Instruction[] instructions) {
+    public void followInstructions(Instruction[] instructions, Surface surface) {
         try {
             for (int i = 0; i < instructions.length; i++) {
                 if(instructions[i] == Instruction.M){
-                    this.drive();
+                    this.drive(surface);
                 } else {
                     this.rotate(instructions[i]);
                 }
             }
         } catch (NotDrivableLocationException e){
-            System.out.println("EMERGENCY STOP!\n");
+            System.out.println("\nEMERGENCY STOP!\n");
 
         }
     }

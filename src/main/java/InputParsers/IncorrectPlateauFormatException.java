@@ -1,4 +1,4 @@
 package InputParsers;
 
-public class IncorrectPlateauFormatException extends Exception{
+public class IncorrectPlateauFormatException extends Exception {
 }

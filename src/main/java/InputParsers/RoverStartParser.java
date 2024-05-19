@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class RoverStartParser extends Parser {
 
-    public Position getRoverStart(Scanner scanner, PlateauSize plateauSize) throws IncorrectStartingPositionFormatException, NotInPlateauException {
+    public Position parseRoverStart(Scanner scanner, PlateauSize plateauSize) throws IncorrectStartingPositionFormatException, NotInPlateauException {
         String roverStartPositionInput = scanner.nextLine();
         if (verifyFormat.test(roverStartPositionInput)){
             String[] roverStartPositionArray = roverStartPositionInput.split(" ");

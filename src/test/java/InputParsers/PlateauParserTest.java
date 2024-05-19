@@ -1,6 +1,4 @@
 package InputParsers;
-
-import UI.PlateauPrompter;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
@@ -10,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlateauParserTest {
 
     @Test
-    void correctInputGetPlateauDim() throws IncorrectPlateauFormatException {
+    void correctInputParsePlateauDim() throws IncorrectPlateauFormatException {
 
         PlateauParser plateauParser = new PlateauParser();
 
@@ -22,8 +20,8 @@ class PlateauParserTest {
         int ExpectedOutput2x = 2;
         int ExpectedOutput2y = 3;
 
-        PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
-        PlateauSize plateau2 = plateauParser.getPlateauSize(scanner);
+        PlateauSize plateau1 = plateauParser.parsePlateauSize(scanner);
+        PlateauSize plateau2 = plateauParser.parsePlateauSize(scanner);
 
         int actualOutput1x = plateau1.width();
         int actualOutput1y = plateau1.length();
@@ -41,7 +39,7 @@ class PlateauParserTest {
     }
 
     @Test
-    void incorrectInputGetPlateauDim() throws IncorrectPlateauFormatException {
+    void incorrectInputParsePlateauDim() throws IncorrectPlateauFormatException {
         PlateauParser plateauParser = new PlateauParser();
 
         Scanner scanner = new Scanner("Hello\n0 0\n-444\n-3 -3\n2 3");
@@ -49,12 +47,12 @@ class PlateauParserTest {
         int ExpectedOutput1x = 2;
         int ExpectedOutput1y = 3;
 
-        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
-        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
-        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
-        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.getPlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.parsePlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.parsePlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.parsePlateauSize(scanner));
+        assertThrows(IncorrectPlateauFormatException.class, () -> plateauParser.parsePlateauSize(scanner));
 
-        PlateauSize plateau1 = plateauParser.getPlateauSize(scanner);
+        PlateauSize plateau1 = plateauParser.parsePlateauSize(scanner);
 
 
 

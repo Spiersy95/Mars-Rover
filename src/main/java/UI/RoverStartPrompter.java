@@ -13,7 +13,7 @@ public class RoverStartPrompter {
             System.out.println("e.g. \"2 4 N\" would place the rover at the coordinate (2,4) facing north.\n");
 
             try {
-                return roverStartParser.getRoverStart(scanner, plateauSize);
+                return roverStartParser.parseRoverStart(scanner, plateauSize);
             } catch (IncorrectStartingPositionFormatException e) {
                 this.formatWarning();
 

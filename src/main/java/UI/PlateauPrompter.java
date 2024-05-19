@@ -13,7 +13,7 @@ public class PlateauPrompter implements Prompter {
             System.out.println("[Positive between 1 and 5][space][Positive Integer between 1 and 5]");
             System.out.println("e.g. \"2 3\" would create a plateau of 3 x 4 grid.\n");
             try{
-                return plateauParser.getPlateauSize(scanner);
+                return plateauParser.parsePlateauSize(scanner);
             } catch (IncorrectPlateauFormatException e) {
                 this.formatWarning();
             }

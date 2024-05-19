@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI/InstructionPrompterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI/PlateauPrompterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI/RoverStartPrompterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectPlateauFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectPlateauFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectStartingPositionFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/IncorrectStartingPositionFormatException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InvalidInstructionsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InvalidInstructionsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Surface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Surface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Logic/PlateauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/PlateauTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/InstructionPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/InstructionPrompterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/PlateauPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/PlateauPrompterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/RoverStartPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/RoverStartPrompterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +51,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.InstructionParserTest (1).executor": "Run",
+    "JUnit.InstructionParserTest.convertingLambdaStringToInstruction.executor": "Run",
     "JUnit.InstructionParserTest.convertingStringToInstructions.executor": "Run",
     "JUnit.InstructionParserTest.correctInputGetInstructions.executor": "Run",
     "JUnit.InstructionParserTest.correctInputVerifyFormat.executor": "Run",
@@ -65,6 +59,7 @@
     "JUnit.InstructionParserTest.incorrectInputGetInstructions.executor": "Run",
     "JUnit.InstructionParserTest.incorrectInputVerifyFormat.executor": "Run",
     "JUnit.InstructionParserTest.stringToInstructions.executor": "Run",
+    "JUnit.InstructionParserTest.stringToInstructionsTest.executor": "Run",
     "JUnit.InstructionPrompterTest.executor": "Run",
     "JUnit.PlateauParserTest.correctInputGetPlateauDim.executor": "Run",
     "JUnit.PlateauParserTest.correctInputPlateauFormatVerifyTest.executor": "Run",
@@ -83,6 +78,7 @@
     "JUnit.RoverStartParserTest.WrongInputFormatVerifyFormat.executor": "Run",
     "JUnit.RoverStartParserTest.correctInputVerifyFormat.executor": "Run",
     "JUnit.RoverStartParserTest.executor": "Run",
+    "JUnit.RoverStartParserTest.getCompassDirectionTest.executor": "Run",
     "JUnit.RoverStartParserTest.getCompassDirectionsTest.executor": "Run",
     "JUnit.RoverStartParserTest.getRoverStartTest.executor": "Run",
     "JUnit.RoverStartParserTest.incorrectInputGetRoverStartTest.executor": "Run",
@@ -121,23 +117,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlateauParserTest.incorrectInputGetPlateauDim">
-    <configuration name="InstructionParserTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UI" />
-      <option name="MAIN_CLASS_NAME" value="UI.InstructionParserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RoverStartParserTest.getCompassDirectionTest">
+    <configuration name="InstructionParserTest.convertingLambdaStringToInstruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
         <pattern>
@@ -147,28 +128,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="InputParsers" />
       <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InstructionParserTest.incorrectInputGetInstructions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mars-rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="UI" />
-      <option name="MAIN_CLASS_NAME" value="UI.InstructionParserTest" />
-      <option name="METHOD_NAME" value="incorrectInputGetInstructions" />
+      <option name="METHOD_NAME" value="convertingLambdaStringToInstruction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlateauParserTest.correctInputGetPlateauDim" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InstructionParserTest.correctInputVerifyFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mars-rover" />
       <extension name="coverage">
         <pattern>
@@ -177,8 +143,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="InputParsers" />
-      <option name="MAIN_CLASS_NAME" value="InputParsers.PlateauParserTest" />
-      <option name="METHOD_NAME" value="correctInputGetPlateauDim" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
+      <option name="METHOD_NAME" value="correctInputVerifyFormat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InstructionParserTest.stringToInstructionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputParsers" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.InstructionParserTest" />
+      <option name="METHOD_NAME" value="stringToInstructionsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,13 +182,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoverStartParserTest.getCompassDirectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mars-rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputParsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputParsers" />
+      <option name="MAIN_CLASS_NAME" value="InputParsers.RoverStartParserTest" />
+      <option name="METHOD_NAME" value="getCompassDirectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverStartParserTest.getCompassDirectionTest" />
+        <item itemvalue="JUnit.InstructionParserTest.convertingLambdaStringToInstruction" />
+        <item itemvalue="JUnit.InstructionParserTest.stringToInstructionsTest" />
+        <item itemvalue="JUnit.InstructionParserTest.correctInputVerifyFormat" />
         <item itemvalue="JUnit.PlateauParserTest.incorrectInputGetPlateauDim" />
-        <item itemvalue="JUnit.PlateauParserTest.correctInputGetPlateauDim" />
-        <item itemvalue="JUnit.InstructionParserTest" />
-        <item itemvalue="JUnit.InstructionParserTest (1)" />
-        <item itemvalue="JUnit.InstructionParserTest.incorrectInputGetInstructions" />
       </list>
     </recent_temporary>
   </component>

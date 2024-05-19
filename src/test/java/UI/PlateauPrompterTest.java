@@ -15,7 +15,7 @@ class PlateauPrompterTest {
 
 
     @Test
-    void correctInputGetPlateauDim(){
+    void correctInputPlateauDimPrompt(){
 
         PlateauParser plateauParser = new PlateauParser();
         PlateauPrompter plateauPrompter = new PlateauPrompter();
@@ -47,7 +47,7 @@ class PlateauPrompterTest {
     }
 
     @Test
-    void incorrectInputGetPlateauDim() throws IncorrectPlateauFormatException {
+    void incorrectInputPlateauDimPrompt() throws IncorrectPlateauFormatException {
         PlateauParser plateauParser = new PlateauParser();
         PlateauPrompter plateauPrompter = new PlateauPrompter();
 

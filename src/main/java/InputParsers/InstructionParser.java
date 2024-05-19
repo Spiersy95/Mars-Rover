@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public class InstructionParser extends Parser{
 
-    public Instruction[] getInstructions(Scanner scanner) throws InvalidInstructionsException {
+    public Instruction[] parseInstructions(Scanner scanner) throws InvalidInstructionsException {
         String instructionInput = scanner.nextLine();
         if (verifyFormat.test(instructionInput)){
             return this.stringToInstructions(instructionInput);

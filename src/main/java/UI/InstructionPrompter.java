@@ -16,7 +16,7 @@ public class InstructionPrompter {
             System.out.println("M - Moves the rover forward.\n");
 
             try {
-                return instructionParser.getInstructions(scanner);
+                return instructionParser.parseInstructions(scanner);
             } catch (InvalidInstructionsException e) {
                 this.formatWarning();
             }

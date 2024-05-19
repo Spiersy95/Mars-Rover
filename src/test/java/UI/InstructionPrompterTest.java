@@ -11,22 +11,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InstructionPrompterTest {
 
-
-
-
     @Test
-    void correctInputGetInstructions() throws InvalidInstructionsException {
+    void correctInputInstructionsPrompt() throws InvalidInstructionsException {
         Scanner scanner = new Scanner("LMR\nMMMM\n\n");
         InstructionParser instructionParser = new InstructionParser();
-        InstructionPrompter instructionPrompter = new InstructionPrompter();
+
 
         Instruction[] expectedOutput1 = new Instruction[]{Instruction.L, Instruction.M, Instruction.R};
         Instruction[] expectedOutput2 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M};
         Instruction[] expectedOutput3 = new Instruction[]{};
 
-        Instruction[] actualOutput1 = instructionPrompter.prompt(scanner, instructionParser);
-        Instruction[] actualOutput2 = instructionPrompter.prompt(scanner, instructionParser);
-        Instruction[] actualOutput3 = instructionPrompter.prompt(scanner, instructionParser);
+        Instruction[] actualOutput1 = instructionParser.parseInstructions(scanner);
+        Instruction[] actualOutput2 = instructionParser.parseInstructions(scanner);
+        Instruction[] actualOutput3 = instructionParser.parseInstructions(scanner);
 
         assertArrayEquals(expectedOutput1,actualOutput1);
         assertArrayEquals(expectedOutput2,actualOutput2);
@@ -34,11 +31,10 @@ class InstructionPrompterTest {
     }
 
     @Test
-    void incorrectInputGetInstructions() throws InvalidInstructionsException {
+    void incorrectInputInstructionsPrompt(){
         Scanner scanner = new Scanner("L R\nKE\n \nLLMMNNEEE\nMMMM");
         InstructionParser instructionParser = new InstructionParser();
         InstructionPrompter instructionPrompter = new InstructionPrompter();
-
 
         Instruction[] expectedOutput1 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M};
 

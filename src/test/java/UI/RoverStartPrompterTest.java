@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoverStartPrompterTest {
 
     @Test
-    void correctInputGetRoverStartTest(){
+    void correctInputRoverStartPromptTest(){
 
         RoverStartParser roverStartParser = new RoverStartParser();
         RoverStartPrompter roverStartPrompter = new RoverStartPrompter();
@@ -82,7 +82,7 @@ class RoverStartPrompterTest {
     }
 
     @Test
-    void incorrectInputGetRoverStartTest(){
+    void incorrectInputRoverStartPromptTest(){
 
         RoverStartParser roverStartParser = new RoverStartParser();
         RoverStartPrompter roverStartPrompter = new RoverStartPrompter();

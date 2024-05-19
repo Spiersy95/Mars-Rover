@@ -13,11 +13,11 @@ import java.util.function.Supplier;
 
 public class Rover implements Vehicle {
 
-    private String name;
+    //private String name;
     private Position position;
 
     public Rover(Position position){
-        this.name = name;
+       // this.name = name;
         this.position = position;
     }
 

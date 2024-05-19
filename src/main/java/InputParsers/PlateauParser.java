@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 
 public class PlateauParser extends Parser{
 
-    public PlateauSize getPlateauSize(Scanner scanner) throws IncorrectPlateauFormatException {
+    public PlateauSize parsePlateauSize(Scanner scanner) throws IncorrectPlateauFormatException {
                 String plateauInput = scanner.nextLine();
                 if (verifyFormat.test(plateauInput)){
 

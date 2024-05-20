@@ -31,6 +31,8 @@ public class Main {
         roverPosition = roverStartPrompter.prompt(scanner, roverStartParser, plateauSize);
         Rover rover = new Rover(roverPosition);
 
+        plateau.addVehicleToSurface(rover);
+
         Instruction[] instructions = instructionPrompter.prompt(scanner, instructionParser);
         rover.followInstructions(instructions, plateau);
 

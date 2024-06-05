@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="882be409-3c9b-4d39-8277-0e4e1f99d3d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Plateau/onPlateau/onPlateauTrue.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Rover/drive/driveBoundaryThrows.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Rover/drive/driveBoundaryTrue.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Rover/drive/driveInterior.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Rover/followInstructions.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Rover/rotate.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/CompassDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTypes/CompassDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTypes/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/InstructionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTypes/PlateauSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataTypes/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputParsers/RoverStartParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Plateau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/PositionLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/PositionLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Rover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Surface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Surface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/InstructionPrompter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/PlateauPrompter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UI/RoverStartPrompter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/InstructionParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/PlateauParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputParsers/RoverStartParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Logic/PlateauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/PlateauTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Logic/RoverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UI/InstructionPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/InstructionPrompterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UI/PlateauPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/PlateauPrompterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UI/RoverStartPrompterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/RoverStartPrompterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +20,8 @@
         <option value="Enum" />
         <option value="Record" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -131,13 +103,15 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/Logic" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Logic/Plateau" />
       <recent name="$PROJECT_DIR$/src/test/resources/Rover" />
       <recent name="$PROJECT_DIR$/src/test/resources/Plateau" />
       <recent name="$PROJECT_DIR$/src/test/resources/onPlateau" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="UI" />
       <recent name="Logic" />
+      <recent name="UI" />
       <recent name="InputParsers" />
     </key>
     <key name="CreateTestDialog.RecentsKey">

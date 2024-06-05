@@ -10,7 +10,6 @@ import java.util.function.Supplier;
 
 
 
-
 public class Rover implements Vehicle {
 
     //private String name;
@@ -77,6 +76,7 @@ public class Rover implements Vehicle {
                 } else {
                     this.rotate(instructions[i]);
                 }
+                PositionLogger.getInstance().logLocation(this);
             }
         } catch (NotDrivableLocationException e){
             System.out.println("\nEMERGENCY STOP!\n");

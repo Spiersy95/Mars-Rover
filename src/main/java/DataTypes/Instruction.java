@@ -1,4 +1,4 @@
-package InputParsers;
+package DataTypes;
 
 public enum Instruction {
 

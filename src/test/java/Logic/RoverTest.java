@@ -1,246 +1,128 @@
 package Logic;
 
-import InputParsers.CompassDirection;
-import InputParsers.Instruction;
-import InputParsers.PlateauSize;
-import InputParsers.Position;
-import org.junit.jupiter.api.Test;
+import DataTypes.CompassDirection;
+import DataTypes.Instruction;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
+import InputParsers.InstructionParser;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverTest {
 
-    @Test
-    void driveInsideInteriorTest() throws NotDrivableLocationException {
-        Position position1 = new Position(2, 3, CompassDirection.N);
-        Position position2 = new Position(2, 2, CompassDirection.S);
-        Position position3 = new Position(2, 3, CompassDirection.E);
-        Position position4 = new Position(2, 3, CompassDirection.W);
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Logic/Rover/drive/driveInterior.csv", numLinesToSkip = 1)
+    void driveInsideInteriorTest(String X, String Y, String direction, String ExpectedFirst, String ExpectedSecond ) throws NotDrivableLocationException {
+        Position position = new Position(Integer.parseInt(X), Integer.parseInt(Y), CompassDirection.valueOf(direction));
 
-        Rover rover1 = new Rover(position1);
-        Rover rover2 = new Rover(position2);
-        Rover rover3 = new Rover(position3);
-        Rover rover4 = new Rover(position4);
+        Rover rover = new Rover(position);
 
         PlateauSize plateauSize = new PlateauSize(4, 4);
         Plateau plateau = new Plateau(plateauSize);
 
-        plateau.addVehicleToSurface(rover1);
-        plateau.addVehicleToSurface(rover2);
-        plateau.addVehicleToSurface(rover3);
-        plateau.addVehicleToSurface(rover4);
+        plateau.addVehicleToSurface(rover);
 
-        rover1.drive(plateau);
-        rover2.drive(plateau);
-        rover3.drive(plateau);
-        rover4.drive(plateau);
+        rover.drive(plateau);
 
-        assertEquals(2, rover1.getPosition().getX());
-        assertEquals(4, rover1.getPosition().getY());
-        assertEquals(CompassDirection.N, rover1.getPosition().getFacing());
+        assertEquals(Integer.parseInt(ExpectedFirst), rover.getPosition().getX());
+        assertEquals(Integer.parseInt(ExpectedSecond), rover.getPosition().getY());
+        assertEquals(CompassDirection.valueOf(direction), rover.getPosition().getFacing());
 
-        assertEquals(2, rover2.getPosition().getX());
-        assertEquals(1, rover2.getPosition().getY());
-        assertEquals(CompassDirection.S, rover2.getPosition().getFacing());
-
-        assertEquals(3, rover3.getPosition().getX());
-        assertEquals(3, rover3.getPosition().getY());
-        assertEquals(CompassDirection.E, rover3.getPosition().getFacing());
-
-        assertEquals(1, rover4.getPosition().getX());
-        assertEquals(3, rover4.getPosition().getY());
-        assertEquals(CompassDirection.W, rover4.getPosition().getFacing());
     }
 
-    @Test
-    void driveBoundaryTest() throws NotDrivableLocationException {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Logic/Rover/drive/driveBoundaryTrue.csv", numLinesToSkip = 1)
+    void driveBoundaryTrueTest(String X, String Y, String direction,String expectedFirst, String expectedSecond) throws NotDrivableLocationException {
         PlateauSize plateauSize = new PlateauSize(4, 4);
         Plateau plateau = new Plateau(plateauSize);
-        Position position1 = new Position(0, 3, CompassDirection.W);
-        Position position2 = new Position(2, 0, CompassDirection.N);
-        Position position3 = new Position(2, 4, CompassDirection.E);
-        Position position4 = new Position(4, 3, CompassDirection.E);
 
-        Rover rover1 = new Rover(position1);
-        Rover rover2 = new Rover(position2);
-        Rover rover3 = new Rover(position3);
-        Rover rover4 = new Rover(position4);
+        Position position = new Position(Integer.parseInt(X),
+                Integer.parseInt(Y),
+                CompassDirection.valueOf(direction));
 
-        plateau.addVehicleToSurface(rover1);
-        plateau.addVehicleToSurface(rover2);
-        plateau.addVehicleToSurface(rover3);
-        plateau.addVehicleToSurface(rover4);
+        Rover rover = new Rover(position);
 
-        assertThrows(Exception.class, () -> rover1.drive(plateau));
+        plateau.addVehicleToSurface(rover);
 
-        rover2.drive(plateau);
-        assertEquals(2, rover2.getPosition().getX());
-        assertEquals(1, rover2.getPosition().getY());
-        assertEquals(CompassDirection.N, rover2.getPosition().getFacing());
+        rover.drive(plateau);
 
-
-        rover3.drive(plateau);
-        assertEquals(3, rover3.getPosition().getX());
-        assertEquals(4, rover3.getPosition().getY());
-        assertEquals(CompassDirection.E, rover3.getPosition().getFacing());
-
-        assertThrows(Exception.class, () ->  rover4.drive(plateau));
+        assertEquals(Integer.parseInt(expectedFirst), rover.getPosition().getX());
+        assertEquals(Integer.parseInt(expectedSecond), rover.getPosition().getY());
+        assertEquals(CompassDirection.valueOf(direction), rover.getPosition().getFacing());
 
     }
 
-    @Test
-    void rotate() {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Logic/Rover/drive/driveBoundaryThrows.csv", numLinesToSkip = 1)
+    void driveBoundaryThrowTest(String X, String Y, String direction) throws NotDrivableLocationException {
+        PlateauSize plateauSize = new PlateauSize(4, 4);
+        Plateau plateau = new Plateau(plateauSize);
+
+        Position position = new Position(Integer.parseInt(X),
+                Integer.parseInt(Y),
+                CompassDirection.valueOf(direction));
+
+        Rover rover = new Rover(position);
+
+        plateau.addVehicleToSurface(rover);
+
+        assertThrows(Exception.class, () -> rover.drive(plateau));
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Logic/Rover/rotate.csv", numLinesToSkip = 1)
+    void rotate(String direction, String turn, String expectation) {
 
         PlateauSize plateauSize = new PlateauSize(5, 3);
 
         Plateau plateau = new Plateau(plateauSize);
 
-        Position positionN = new Position(2, 2, CompassDirection.N);
-        Position positionE = new Position(2, 2, CompassDirection.E);
-        Position positionS = new Position(2, 2, CompassDirection.S);
-        Position positionW = new Position(2, 2, CompassDirection.W);
-
-        Rover roverNR = new Rover(positionN);
-        Rover roverNL = new Rover(positionN);
-        Rover roverNM = new Rover(positionN);
-
-        Rover roverER = new Rover(positionE);
-        Rover roverEL = new Rover(positionE);
-        Rover roverEM = new Rover(positionE);
-
-        Rover roverSR = new Rover(positionS);
-        Rover roverSL = new Rover(positionS);
-        Rover roverSM = new Rover(positionS);
-
-        Rover roverWR = new Rover(positionW);
-        Rover roverWL = new Rover(positionW);
-        Rover roverWM = new Rover(positionW);
-
-        plateau.addVehicleToSurface(roverNR);
-        plateau.addVehicleToSurface(roverNL);
-        plateau.addVehicleToSurface(roverNM);
-
-        plateau.addVehicleToSurface(roverER);
-        plateau.addVehicleToSurface(roverEL);
-        plateau.addVehicleToSurface(roverEM);
-
-        plateau.addVehicleToSurface(roverSR);
-        plateau.addVehicleToSurface(roverSL);
-        plateau.addVehicleToSurface(roverSM);
-
-        plateau.addVehicleToSurface(roverWR);
-        plateau.addVehicleToSurface(roverWL);
-        plateau.addVehicleToSurface(roverWM);
+        Position position = new Position(2, 2, CompassDirection.valueOf(direction));
 
 
+        Rover rover= new Rover(position);
 
+        plateau.addVehicleToSurface(rover);
 
-        roverNR.rotate(Instruction.R);
-        roverNL.rotate(Instruction.L);
-        roverNM.rotate(Instruction.M);
+        rover.rotate(Instruction.valueOf(turn));
 
-        roverER.rotate(Instruction.R);
-        roverEL.rotate(Instruction.L);
-        roverEM.rotate(Instruction.M);
+        assertEquals(CompassDirection.valueOf(expectation), rover.getFacing.get());
 
-        roverSR.rotate(Instruction.R);
-        roverSL.rotate(Instruction.L);
-        roverSM.rotate(Instruction.M);
-
-        roverWR.rotate(Instruction.R);
-        roverWL.rotate(Instruction.L);
-        roverWM.rotate(Instruction.M);
-
-        assertEquals(CompassDirection.E, roverNR.getFacing.get());
-        assertEquals(CompassDirection.W, roverNL.getFacing.get());
-        assertEquals(CompassDirection.N, roverNM.getFacing.get());
-
-        assertEquals(CompassDirection.S, roverER.getFacing.get());
-        assertEquals(CompassDirection.N, roverEL.getFacing.get());
-        assertEquals(CompassDirection.E, roverEM.getFacing.get());
-
-        assertEquals(CompassDirection.W, roverSR.getFacing.get());
-        assertEquals(CompassDirection.E, roverSL.getFacing.get());
-        assertEquals(CompassDirection.S, roverSM.getFacing.get());
-
-        assertEquals(CompassDirection.N, roverWR.getFacing.get());
-        assertEquals(CompassDirection.S, roverWL.getFacing.get());
-        assertEquals(CompassDirection.W, roverWM.getFacing.get());
     }
 
-    @Test
-    void followInstructionsTest() {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/Logic/Rover/followInstructions.csv", numLinesToSkip = 1)
+    void followInstructionsTest(String X,
+                                String Y,
+                                String direction,
+                                String expectedFirst,
+                                String expectedSecond,
+                                String expectedLast,
+                                String instructionString) {
         PlateauSize plateauSize = new PlateauSize(5, 5);
         Plateau plateau = new Plateau(plateauSize);
 
-        Position position1 = new Position(2, 4, CompassDirection.N);
-        Position position2 = new Position(0, 0, CompassDirection.W);
-        Position position3 = new Position(0, 3, CompassDirection.E);
-        Position position4 = new Position(2, 0, CompassDirection.N);
+        InstructionParser instructionParser = new InstructionParser();
 
-        Rover rover1 = new Rover(position1);
-        Rover rover2 = new Rover(position2);
-        Rover rover3 = new Rover(position3);
-        Rover rover4 = new Rover(position4);
-        Rover rover5 = new Rover(position2);
+        Position position = new Position(Integer.parseInt(X), Integer.parseInt(Y), CompassDirection.valueOf(direction));
 
-        plateau.addVehicleToSurface(rover1);
-        plateau.addVehicleToSurface(rover2);
-        plateau.addVehicleToSurface(rover3);
-        plateau.addVehicleToSurface(rover4);
+        Rover rover = new Rover(position);
 
+        plateau.addVehicleToSurface(rover);
 
-        Instruction[] input1 = new Instruction[]{Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L, Instruction.L};
-        Instruction[] input2 = new Instruction[]{Instruction.R, Instruction.R, Instruction.R, Instruction.R};
-        Instruction[] input3 = new Instruction[]{Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M, Instruction.M};
-        Instruction[] input4 = new Instruction[]{Instruction.R, Instruction.M, Instruction.L, Instruction.M};
-        Instruction[] input5 = new Instruction[]{};
+        Instruction[] input = instructionParser.stringToInstructions(instructionString);
 
-        int expectedOutput1x = 2;
-        int expectedOutput1y = 4;
-        CompassDirection expectedOutput1Dir = CompassDirection.S;
+        int expectedOutput1x = Integer.parseInt(expectedFirst);
+        int expectedOutput1y = Integer.parseInt(expectedSecond);
+        CompassDirection expectedOutput1Dir = CompassDirection.valueOf(expectedLast);
 
-        int expectedOutput2x = 0;
-        int expectedOutput2y = 0;
-        CompassDirection expectedOutput2Dir = CompassDirection.W;
+        rover.followInstructions(input, plateau);
 
-        int expectedOutput3x = 5;
-        int expectedOutput3y = 3;
-        CompassDirection expectedOutput3Dir = CompassDirection.E;
-
-        int expectedOutput4x = 3;
-        int expectedOutput4y = 1;
-        CompassDirection expectedOutput4Dir = CompassDirection.N;
-
-        int expectedOutput5x = 0;
-        int expectedOutput5y = 0;
-        CompassDirection expectedOutput5Dir = CompassDirection.W;
-
-        rover1.followInstructions(input1, plateau);
-        rover2.followInstructions(input2, plateau);
-        rover3.followInstructions(input3, plateau);
-        rover4.followInstructions(input4, plateau);
-        rover5.followInstructions(input5, plateau);
-
-        assertEquals(expectedOutput1x, rover1.getPosition().getX());
-        assertEquals(expectedOutput1y, rover1.getPosition().getY());
-        assertEquals(expectedOutput1Dir, rover1.getFacing.get());
-
-        assertEquals(expectedOutput2x, rover2.getPosition().getX());
-        assertEquals(expectedOutput2y, rover2.getPosition().getY());
-        assertEquals(expectedOutput2Dir, rover2.getFacing.get());
-
-        assertEquals(expectedOutput3x, rover3.getPosition().getX());
-        assertEquals(expectedOutput3y, rover3.getPosition().getY());
-        assertEquals(expectedOutput3Dir, rover3.getFacing.get());
-
-        assertEquals(expectedOutput4x, rover4.getPosition().getX());
-        assertEquals(expectedOutput4y, rover4.getPosition().getY());
-        assertEquals(expectedOutput4Dir, rover4.getFacing.get());
-
-        assertEquals(expectedOutput5x, rover5.getPosition().getX());
-        assertEquals(expectedOutput5y, rover5.getPosition().getY());
-        assertEquals(expectedOutput5Dir, rover5.getFacing.get());
+        assertEquals(expectedOutput1x, rover.getPosition().getX());
+        assertEquals(expectedOutput1y, rover.getPosition().getY());
+        assertEquals(expectedOutput1Dir, rover.getFacing.get());
 
     }
 

@@ -1,3 +1,6 @@
+import DataTypes.Instruction;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
 import InputParsers.*;
 import Logic.Plateau;
 import Logic.Rover;
@@ -36,6 +39,7 @@ public class Main {
         Instruction[] instructions = instructionPrompter.prompt(scanner, instructionParser);
         rover.followInstructions(instructions, plateau);
 
-        System.out.printf("\nRover is at position %s %s %s", rover.getPosition().getX(), rover.getPosition().getY(), rover.getPosition().getFacing() );
+        System.out.printf("\nRover is at position %s %s %s", rover.getPosition().getX(),
+                rover.getPosition().getY(), rover.getPosition().getFacing() );
     }
 }

@@ -1,7 +1,7 @@
 package Logic;
 
-import InputParsers.PlateauSize;
-import InputParsers.Position;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
 
 import java.util.ArrayList;
 

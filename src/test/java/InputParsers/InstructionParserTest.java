@@ -1,5 +1,6 @@
 package InputParsers;
 
+import DataTypes.Instruction;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;

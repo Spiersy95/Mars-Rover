@@ -1,4 +1,5 @@
 package InputParsers;
+import DataTypes.PlateauSize;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;

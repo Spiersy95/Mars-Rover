@@ -1,0 +1,13 @@
+direction,turn,expectation
+N,R,E
+N,L,W
+N,M,N
+E,R,S
+E,L,N
+E,M,E
+S,R,W
+S,L,E
+S,M,S
+W,R,N
+W,L,S
+W,M,W

@@ -1,5 +1,7 @@
 package InputParsers;
 
+import DataTypes.PlateauSize;
+
 import java.util.Scanner;
 import java.util.function.Predicate;
 

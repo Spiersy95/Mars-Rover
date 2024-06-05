@@ -1,13 +1,13 @@
 package UI;
 
+import DataTypes.CompassDirection;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
 import InputParsers.*;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.Scanner;
 
-import static InputParsers.RoverStartParser.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverStartPrompterTest {

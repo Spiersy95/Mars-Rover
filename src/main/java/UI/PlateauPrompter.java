@@ -2,7 +2,7 @@ package UI;
 
 import InputParsers.IncorrectPlateauFormatException;
 import InputParsers.PlateauParser;
-import InputParsers.PlateauSize;
+import DataTypes.PlateauSize;
 
 import java.util.Scanner;
 

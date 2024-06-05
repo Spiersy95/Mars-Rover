@@ -1,5 +1,8 @@
 package InputParsers;
 
+import DataTypes.CompassDirection;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;

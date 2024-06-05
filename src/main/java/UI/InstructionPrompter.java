@@ -1,6 +1,6 @@
 package UI;
 
-import InputParsers.Instruction;
+import DataTypes.Instruction;
 import InputParsers.InstructionParser;
 import InputParsers.InvalidInstructionsException;
 

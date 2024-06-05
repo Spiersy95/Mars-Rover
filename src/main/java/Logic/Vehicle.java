@@ -1,7 +1,5 @@
 package Logic;
 
-import InputParsers.Position;
-
 public interface Vehicle {
 
 

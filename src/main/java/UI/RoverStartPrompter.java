@@ -1,5 +1,7 @@
 package UI;
 
+import DataTypes.PlateauSize;
+import DataTypes.Position;
 import InputParsers.*;
 
 import java.util.Scanner;

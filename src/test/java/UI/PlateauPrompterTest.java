@@ -2,11 +2,9 @@ package UI;
 
 import InputParsers.IncorrectPlateauFormatException;
 import InputParsers.PlateauParser;
-import InputParsers.PlateauSize;
+import DataTypes.PlateauSize;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;

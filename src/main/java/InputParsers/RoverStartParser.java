@@ -1,5 +1,9 @@
 package InputParsers;
 
+import DataTypes.CompassDirection;
+import DataTypes.PlateauSize;
+import DataTypes.Position;
+
 import java.util.Scanner;
 import java.util.function.BiPredicate;
 import java.util.function.Function;

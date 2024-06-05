@@ -1,6 +1,6 @@
 package Logic;
 
-import InputParsers.Position;
+import DataTypes.Position;
 
 public interface Surface {
 

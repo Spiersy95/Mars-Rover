@@ -1,5 +1,7 @@
 package InputParsers;
 
+import DataTypes.Instruction;
+
 import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
